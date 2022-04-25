@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html标签类型</title>
+</head>
+
+<body>
+  <div>html标签有三类: 块级元素、行内元素、行内块元素</div>
+  <!-- ------------------------------------------------------------------ -->
+  <div>
+    块级元素: 标签独占一行、可指定宽高
+    特性:
+    1.能识别宽高
+    2.margin和padding的上下左右均对其有效
+    3.可以自动换行
+    4.多个块级块级元素写在一起，默认排序方式为从上到下
+    5.可以使用margin:0 auto 居中对齐。
+  </div>
+  <div>
+    常用块级元素有: div p h1~h6 ol ul dl table form
+  </div>
+  <!-- ------------------------------------------------------------------ -->
+  <div>
+    行内元素:标签在一行内，宽度与高度由内容决定，只有在内容超过HTML的宽度时，才会换行。
+    特性：
+    1.无法设置宽高
+    2.margin上下无效，只有左右有效，padding都有效，会撑大空间；box-sizing：border-box无效 因为该属性针对盒模型
+    3.不会自动换行
+  </div>
+  <div>
+    常有行内元素有: a span label i em strong label
+  </div>
+  <!-- ------------------------------------------------------------------ -->
+  <div>
+    行内块元素:同时具备内联元素、块状元素的特点
+    特性:
+    1.不会自动换行
+    2.能够设置宽高
+    3.默认排序方式为从左到右
+    4.可以使用text-align:center使内容相对于父盒子水平居中对齐，例如img标签，可以使用text-align:center，相对父盒子居中对齐、margin:0 auto无效
+    5.水平排列，但所有元素默认会有1个空格的间隙，因为元素之间在html中书写有回车换行，浏览器解析会将其解析成一个空格。
+  </div>
+  <div>
+    常有行内块元素有: img input
+  </div>
+  <div>这三者之间可以互相转换</div>
+</body>
+
+</html>

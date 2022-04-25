@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>复合选择器</title>
+  <style>
+    .nav ul li a {
+      color: red;
+    }
+
+    .hot>a {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    后代选择器：可以选择父元素的子元素 div p
+  </div>
+  <div>
+    子代选择器：选择最亲一代的子元素 div>P
+  </div>
+  <div>
+    子代选择器和后代选择器的区别是；后代选择器可以选子辈 也可以选孙辈 而子代选择器 只能选子代
+  </div>
+  <div>
+    并集选择器：div,p,a,.class1 给所有选中的元素改变样式
+  </div>
+  <div>
+    伪类选择器: a:link a:visited a:hover a:active input:focus 优先级l v h a
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="#">百度</a></li>
+      <li><a href="#">百度</a></li>
+    </ul>
+  </div>
+  <div class="hot">
+    <a href="#">大肘子</a>
+    <ul>
+      <li><a href="#">猪头</a></li>
+      <li><a href="#">猪尾巴</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

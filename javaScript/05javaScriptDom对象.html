@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn {
+      display: flex;
+    }
+
+    .btn>div {
+      border: 1px solid red;
+      margin-right: 5px;
+      background-color: azure;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div>1.什么是dom：文档对象模型
+    2.获取元素
+    ·根据ID获取
+    ·根据标签名获取
+    ·通过HTML5新方法获取
+    ·特殊元素获取
+  </div>
+  <div>
+    操作元素是dom核心内容
+    1.操作元素
+    操作元素内容 -- innerText innerHtml
+    操作常见元素属性 -- src href title alt
+    操作表单元素属性 -- type value disabled
+    操作元素样式属性 -- element.style className
+  </div>
+
+
+  <div>
+    1.获取标签内置属性
+    img.src a.href
+    2.获取自定义元素
+    element.getAttribute('属性')
+    3.设置标签内置属性
+    img.src = ''; a.href = ''
+    4.设置自定义属性
+    element.setAttribute('属性','值')
+    5.移出属性
+    element.removeAttribute();
+  </div>
+
+
+
+  <div>
+    节点操作:一般 节点至少拥有nodeType(节点类型) nodeName(节点名称) 和nodeValue(节点值) 这三个基本属性
+    元素节点：nodeType为1
+    属性节点：nodeType为2
+    文本节点：nodeType为3
+    1.父级节点
+    element.parentNode
+    2.子级节点
+    parentNode.childNodes(标准)
+    parentNode.children(非标准)
+    3.第一个子节点
+    parentNode.firstChild
+    4.最后一个子节点
+    parentNode.lastChild
+  </div>
+
+  <div>
+    dom节点的创建 增删改查
+    1.创建
+    document.write();
+    element.innerHTML();
+    createElement
+    2.增
+    appendChild()
+    insertBefore()
+    3.删
+    removeChild()
+    4.改
+    img.src
+    5.查
+    getElementById getElementsByTagName
+    querySelector、querySelectorAll
+  </div>
+
+  <div class="btn">
+    <div class="button">按钮1</div>
+    <div class="button">按钮2</div>
+    <div class="button">按钮3</div>
+    <div class="button">按钮4</div>
+    <div class="button">按钮5</div>
+  </div>
+
+  <div class="demo">
+    <div class="box">
+      <span class="erweima">X</span>
+    </div>
+  </div>
+  <div id="time">2022-3-30</div>
+  <div class="name">大黄爸</div>
+  <ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+  </ul>
+</body>
+<script>
+  // 获取div元素
+  var time = document.getElementById('time');
+  // 打印元素
+  // console.log(time);
+  // // 打印元素对象
+  // console.dir(time);
+  // 根据标签名获取元素 返回的是对象的集合,以伪数组的形式存储
+  var tagname = document.getElementsByTagName('div');
+  //  返回对象集合 以伪数组的形式存储
+  var username = document.getElementsByClassName("name");
+  // 根据指定选择器返回第一个元素对象 - 选择器要加符号
+  var username = document.querySelector(".name");
+  var btns = document.getElementsByClassName("button");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function() {
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].style.backgroundColor = '';
+      }
+      this.style.backgroundColor = "red";
+    }
+  }
+
+  var erweima = document.querySelector(".erweima");
+  var ul = document.querySelector("ul");
+  var lis = ul.querySelectorAll("li");
+  console.log(ul.childNodes);
+  console.log(ul.childNodes[0].nodeType);
+  console.log(ul.children);
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ajax</title>
+</head>
+
+<body>
+  <div>ajax:异步javaScript和xml 是指一种创建交互式、快速动态网页应用的网页开发技术</div>
+  <div>作用：没有刷新整个页面，局部调用后台业务接口</div>
+  <div>ajax对象XMLHttpRequest</div>
+  <div>向服务端发送请求 open send</div>
+  <div>创建XMLHttpRequest对象。AJAX 的要点是 XMLHttpRequest 对象。不同的浏览器创建 XMLHttpRequest 对象的方法是有差异的。IE浏览器使用
+    ActiveXObject，而其他的浏览器使用名为 XMLHttpRequest 的 JavaScript 内建对象。</div>
+  <div>cellback</div>
+  <div>200:服务器成功返回了页面</div>
+  <div>400:语法错误导致服务器不识别</div>
+  <div>401:请求需要用户认证</div>
+  <div>404:指定的url在服务器上找不到</div>
+  <div>500:服务器遇到意外错误，无法完成请求</div>
+  <div>503:由于服务器过载或维护导致无法完成请求</div>
+  <div>创建－0初始化请求－1发送请求－2接收数据－3解析数据－4完成 </div>
+  <div>
+    ajax的readyState的五种状态：
+    0-未初始化
+    1-载入/正在发送请求
+    2-载入完成/数据接收
+    3-交互/解析数据
+    4- 后台处理完成
+  </div>
+  <div>axios 可以理解为ajax i/o system 这不是一项新技术 本质上还是对xmlhttpRequest的封装，可以用于浏览器和nodjs的http服务器，只不过它是基于promise的,符合最新的ES规范。
+    它具备以下特点：
+    1.在浏览器中创建xmlHttpRequest对象
+    2.在node.js中发送http请求
+    3.支持promise api
+    4.拦截请求和响应
+    5.转换请求和响应数据
+    6.取消请求
+    7.自动转换JSON数据
+    8.客户端支持防止CSRF/XSRF(跨域请求伪造)
+  </div>
+  <div>axios的请求方法：
+    axios(config)；
+    axios.request(config);
+    axios.get(url,[config]);
+    axios.post();
+    axios.put();
+    axios.delete();
+    axios.patch();
+    axios.head();
+
+    发送并发请求：
+    axios.all(iterable);
+    创建一个axios实例：
+    var instance = axios.create({
+    baseURL:
+    timeout:
+    hedaers:
+    });
+  </div>
+  <div>
+    什么是promise
+    promise是异步编程的一种解决办法，其实是一个构造函数。自身带有all reject resolve几个方法 原型上有then catch等方法
+  </div>
+  <div>
+    promise有三种状态 pending(进行中) fulfilled(已成功) rejected(已失败)
+    promise对象有两个特点：1.对象的状态不受外界影响。2.一旦状态改变，就不会再变，任何时候都可以得到这个结果。
+  </div>
+</body>
+
+</html>

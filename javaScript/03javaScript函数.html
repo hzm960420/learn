@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    arguments: javaScript中当前函数的内置对象。arguments对象中存储了传递的所有实参。
+    1.具有length属性
+    2.按索引方式存储数组
+    3.不具有数组的push,pop等方法
+  </div>
+  <div>
+    函数的两种声明方式: 1.命名函数 2.匿名函数
+    function test1(){
+
+    }
+    调用函数的代码既可以放到声明函数的前面，也可以放在声明函数的后面
+    var fn = function(){
+
+    }
+    函数调用的代码必须写到函数体后面
+  </div>
+  <div>
+    javaScript作用域
+    1.全局作用域 script标签下的作用域
+    2.函数作用域 函数或方法体里面的范围
+    3.块级作用域(es6新增) 用let声明
+    全局作用域：在任何一个地方都可以使用，只有在浏览器关闭时才会被销毁，因此比较占内存
+    局部作用域：在函数调用时初始化,还函数执行完毕后销毁 不占内存
+  </div>
+  <div>
+    javaScript预解析：js引擎会把js里面所有的var 还有function提升到当前作用域的最前面
+  </div>
+</body>
+<script>
+  // 求任意两个函数的最大值
+  function test (num1, num2) {
+    return num1 > num2 ? num1 : num2;
+  }
+
+  // 求任意数组的最大值
+  function test2 (newArray) {
+    var max = newArray[0];
+    let temp = 0;
+    for (var i = 0; i < newArray.length; i++) {
+      if (max < newArray[i]) {
+        max = newArray[i];
+      }
+    }
+  }
+  var arr = [1, 3, 4, 65, 7];
+
+  function test3 () {
+    console.log(arguments);
+
+  }
+  var num = 10;
+  fun();
+  function fun () {
+    console.log(num) // undefined
+    var num = 20;
+  }
+
+  var num = 10;
+  function fn () {
+    console.log(num)
+    var num = 20;
+    console.log(num)
+  }
+  fn()
+
+  var a = 18;
+  f1();
+  function f1 () {
+    var b = 9;
+    console.log(a); // undefined
+    console.log(b); // 9
+    var a = '123';
+  }
+
+  f1()
+  console.log(c)
+  console.log(b)
+  console.log(a)
+  function f1 () {
+    var a = b = c = 9;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+
+  function f1 () {
+    var a;
+    b = c = 9;
+    console.log(a); //9
+    console.log(b); //9
+    console.log(c);//9 
+  }
+  f1();
+  console.log(c) // 9
+  console.log(b) // 9
+  console.log(a) // undefined
+
+
+</script>
+
+</html>

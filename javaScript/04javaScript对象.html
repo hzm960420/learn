@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javaScript</title>
+</head>
+
+<body>
+  <div>
+    javaScript创建对象的方式：
+    1.利用字面量创建对象
+    2.利用new Object创建对象
+    3.利用构造函数创建对象
+  </div>
+
+  <div>
+    new关键字再执行时会做四件事:
+    1.在内存中创建一个新的空对象。
+    2.让this指向这个新的对象
+    3.执行构造函数里的代码,给这个对象添加属性和方法
+    4.返回这个新对象；
+  </div>
+
+  <div>
+    for....in语句用于对对象或数组进行循环操作
+  </div>
+
+  <div>
+    javaScript内置对象
+    1.Math
+    Math.PI // 圆周率
+    Math.floor() // 向下取整
+    Math.ceil() // 向上取整
+    Math.around() //四舍五入
+    Math.abs() // 取绝对值
+    Math.max() / Math.min() // 求最大值和最小值
+
+    2.Date()
+    var now = new Date();
+    Date()里不写参数 返回的是当前时间
+    Date()里写参数 返回的是参数里的时间
+    var date = newDate();
+    date.getFullYear(); // 获取当年
+    date.getMonth() + 1; //获取当月 范围0~11
+    date.getDate(); // 获取当天日期
+    date.getDay(); //获取星期几
+    date.getHours(); // 获取当前小时
+    date.getMinutes(); // 获取当前分钟
+    date.getSeconds(); // 获取当前秒
+
+    3.Arrray
+    arr.push; // 数组末尾添加一个或多个数
+    arr.pop; // 数组末尾删除一个数
+    arr.shift(); // 数组开头删除一个或多个数
+    arr.unshift(); // 数组开头添加一个或多个数
+  </div>
+
+  <div>
+    检查是否为数组：instanceof isArray();
+  </div>
+
+  <div>
+    数组排序：reverse() sort()
+    数组索引：indexOf() lastIndexOf()
+  </div>
+
+  <div>
+    数组转换为字符串 toString() join()
+  </div>
+
+  <div>
+    数组的其他方法：concat() slice() splice()
+  </div>
+
+</body>
+<script>
+  var star = {
+    name: "pink",
+    age: 18,
+    sex: '男',
+    sayHi: function() {
+      alert('大家好~');
+    }
+  }
+
+  var object = new Object();
+  object.name = '张三';
+  object.age = 18;
+
+  function Star (uname, age, address) {
+    this.name = uname;
+    this.age = age;
+    this.address = address;
+  }
+
+  var hzm = new Star("黄子木", 25, "四川成都");
+
+  for (const key in hzm) {
+    // console.log(key);
+    console.log(hzm[key])
+  }
+
+  var myMath = {
+    PI: 3.141592653589793,
+    max: function() {
+      var max = arguments[0];
+      for (var i = 0; i < arguments.length; i++) {
+        if (max < arguments[i]) {
+          max = arguments[i];
+        }
+      }
+      return max;
+    },
+    min: function() {
+      var min = arguments[0];
+      for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] < min) {
+          min = arguments[i];
+        }
+      }
+      return min;
+    }
+  }
+
+  var arr2 = [1, 2, 3, 4]
+  arr2.push(5, 'aaa');
+
+  var arr3 = [1500, 1200, 2000, 2100, 1800];
+  var newArr = [];
+  for (var i = 0; i < arr3.length; i++) {
+    if (arr3[i] > 2000) {
+
+    }
+  }
+
+
+  // 封装日期
+  function testday () {
+    var time = new Date();
+    var year = time.getFullYear();
+    var month = time.getMonth() + 1;
+    month < 10 ? "0" + month : month;
+    var day = time.getDate();
+    day < 10 ? "0" + day : day;
+    var hour = time.getHours();
+    hour < 10 ? "0" + hour : hour;
+    var minutes = time.getMinutes();
+    minutes < 10 ? "0" + minutes : minutes;
+    var secends = time.getSeconds();
+    secends < 10 ? "0" + secends : secends;
+
+    var nowtime = year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + secends;
+    return nowtime;
+  }
+  // 倒计时
+  function daojishi (time) {
+    var oldtime = +new Date(); // 现在的总毫秒数
+    var newtime = +new Date(time); // 输入时间的总毫秒数
+
+    var times = (newtime - oldtime) / 1000 // 剩余时间的总秒数
+
+    var d = parseInt(times / 60 / 60 / 24).padStart(2, '0'); // 天数
+    var h = parseInt(times / 60 / 60 % 24).padStart(2, '0'); // 小时
+    var m = parseInt(times / 60 % 60).padStart(2, '0'); // 分钟数
+  }
+
+  var arr = ["1", "2"];
+  var arr2 = new Array();
+  arr.push("3", "4", "5"); // 向数组末尾增加3,4,5  arr = ["1","2","3","4","5"];
+  arr.pop(); // 数组末尾删除一个数
+  arr.shift(); // 数组开头删除一个数 arr = [2,3,4,]
+  arr.unshift("-1", "0") //arr = [-1,0,2,3,4]
+
+  var test = [1, 3, 2, 4, 5];
+  test.sort();
+  test.reverse();
+
+
+  function test () {
+    console.log(a);
+    console.log(foo());
+
+    var a = 1;
+    function foo () {
+      return 2;
+    }
+  }
+  test()
+
+  function test () {
+    var a;
+    function foo () {
+      return 2;
+    }
+    console.log(a);
+    console.log(foo());
+
+    a = 1;
+  }
+  test();
+</script>
+
+</html>

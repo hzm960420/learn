@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //   当创建一个函数时，js引擎会自动给这个函数创建一个原型对象，并且赋值给函数的prototype属性。同时这个原型对象有一个constructor的属性回指向这个函数。
+
+  // 当通过new这个函数创建实例对象时，js引擎自动给这个实例对象增加一个_proto_属性，指向函数的原型对象。
+
+  // 多个实例对象共享函数的原型，当我们给这个原型里增加属性时，那么这些实例对象都能使用这些新增的属性。
+  function Person (name, age) { // 构造函数
+    this.name = name;
+    this.age = age;
+  }
+  var user = new Person("张三", 25);
+  console.log(Person.prototype);
+</script>
+
+</html>

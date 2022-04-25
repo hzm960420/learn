@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue3组件应用</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <div id="todoItem">
+    <ol>
+      <todo-item></todo-item>
+    </ol>
+  </div>
+  <script>
+    //  Vue数组模板 模板的名称在定义时为驼峰大写命名 在使用时把大写部分变小写，驼峰部分用-分开
+    const TodoItem = {
+      template: `<li>这是一个数组模板</li>`
+    }
+    const app = Vue.createApp({
+      components: {
+        TodoItem // 注册一个新组件
+      }
+    })
+    // 挂载Vue应用
+    app.mount('#todoItem')
+  </script>
+</body>
+
+</html>

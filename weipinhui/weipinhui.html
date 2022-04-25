@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>唯品会（原Vipshop.com）特卖会：品牌特卖_确保正品_确保低价_货到付款</title>
+  <link rel="stylesheet" href="./iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+      color: #777;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    em {
+      font-style: normal;
+    }
+
+    body {
+      font: 16px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+      color: #333;
+      -webkit-font-smoothing: antialiased;
+      overflow-y: scroll;
+    }
+
+
+
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .center {
+      width: 1170px;
+      margin: 0 auto;
+    }
+
+    .header {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      line-height: 27px;
+      color: #777;
+      background-color: #f5f5f5;
+    }
+
+    .h {
+      display: flex;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .citydiv {
+      display: flex;
+      color: #333;
+    }
+
+    .city {
+      margin-top: 1px;
+      margin-left: 16px;
+    }
+
+    .cityicon {
+      height: 0;
+      width: 0;
+      border: 4px solid transparent;
+      border-top-color: #999;
+      margin-top: 11px;
+      margin-left: 15px;
+    }
+
+    .navbar {
+      margin-left: 335px;
+    }
+
+    .navbar ul {
+      display: flex;
+    }
+
+    .navbar ul li {
+      display: flex;
+    }
+
+    .navbar ul li a {
+      display: block;
+      padding: 0 5px;
+      margin-top: 1px;
+    }
+
+    .ems {
+      background: url("./images/sprites-hash.png") no-repeat -207px -184px;
+      width: 16px;
+      height: 16px;
+      margin: 6.5px 4px 0 4px;
+    }
+
+    .plogin {
+      color: #666;
+    }
+
+    .register {
+      color: #666;
+      margin-left: -2px;
+    }
+
+    .gif {
+      margin-top: 3px;
+      margin-left: 3px;
+    }
+
+    .gifdiv {
+      margin-left: -2px;
+      margin-right: -3px;
+    }
+
+    .order {
+      color: #666;
+      margin-left: 1px;
+    }
+
+    .special {
+      margin-left: 1px;
+    }
+
+    .club {
+      color: #666;
+      margin-left: 1px;
+    }
+
+    .service {
+      margin-left: 1px;
+    }
+
+    .triangleicon {
+      width: 0;
+      height: 0;
+      border: 4px solid transparent;
+      border-top-color: #999;
+      margin-top: 14px;
+      margin-left: -2px;
+      margin-right: 6px;
+    }
+
+    .triangleicon2 {
+      width: 0;
+      height: 0;
+      border: 4px solid transparent;
+      border-top-color: #999;
+      margin-top: 14px;
+      margin-left: -2px;
+      margin-right: 16px;
+    }
+
+    .phone {
+      background: url("images/sprites-hash.png") no-repeat -294px -142px;
+      width: 10px;
+      height: 14px;
+      margin-top: 7px;
+      margin-left: 7px;
+      margin-right: 2px;
+    }
+
+    .mobileversion {
+      color: #666;
+      margin-right: -2px;
+    }
+
+    .logodiv {
+      height: 100px;
+      display: flex;
+    }
+
+    .logo {
+      margin-left: -20px;
+    }
+
+    .logo img {
+      width: 160px;
+      background-repeat: no-repeat;
+    }
+
+    .promise {
+      display: flex;
+      background: url("./images/promise.jpg") no-repeat;
+      background-size: cover;
+      width: 304px;
+      height: 100px;
+      margin: 0 1px;
+    }
+
+    .promise a {
+      width: 101px;
+      height: 100px;
+      background-color: transparent;
+    }
+
+    .searchdiv {
+      margin-left: 139px;
+    }
+
+    .inputdiv {
+      display: flex;
+    }
+
+    .inputdiv input {
+      border: 2px solid #fa2a83;
+      border-right: none;
+      height: 32px;
+      width: 372px;
+      margin-top: 33px;
+      padding: 0 12px;
+      border-radius: 2px;
+    }
+
+    .button {
+      width: 55px;
+      height: 36px;
+      background-color: #fa2a83;
+      margin-top: 33px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+
+    .button .img {
+      background: url("./images/sprites-hash.png") no-repeat;
+      background-position: -285px -104px;
+      width: 19px;
+      height: 22px;
+      margin-top: 8px;
+      margin-left: 17px;
+    }
+
+    .shoppingbag {
+      display: flex;
+      width: 94px;
+      height: 32px;
+      line-height: 32px;
+      margin-top: 33px;
+      margin-left: 36px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background: #f6f7f9;
+    }
+
+    .shoppingbag a {
+      font-size: 12px;
+      text-align: center;
+      color: #333;
+    }
+
+    .bagicon {
+      background: url("./images/sprites-hash.png") no-repeat;
+      background-position: 0 -208px;
+      width: 12px;
+      height: 17px;
+      margin-top: 7.5px;
+      margin-left: 8px;
+      margin-right: 5px;
+    }
+
+    .num {
+      height: 16px;
+      width: 24px;
+      line-height: 16px;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      background-color: #f00581;
+      margin-top: 8px;
+      margin-left: 6px;
+    }
+
+    .num div {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .hotword {
+      color: #ccc;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .hotword ul {
+      display: flex;
+    }
+
+    .hotword ul li {
+      display: flex;
+    }
+
+    .hotword ul li a {
+      display: block;
+      padding: 0 1.5px;
+      color: #999;
+    }
+
+    .hotword ul li em {
+      color: #ccc;
+      padding: 0 9px;
+      height: 5px;
+    }
+
+
+
+    .typenav ul {
+      display: flex;
+      height: 43px;
+      line-height: 43px;
+
+    }
+
+    .typenav ul li {
+      display: flex;
+    }
+
+    .typenav ul li a {
+      display: block;
+      color: #333;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .first {
+      margin-right: 25px;
+      background-color: #f10180;
+      width: 156px;
+    }
+
+    .typenav .first a {
+      color: #fff;
+    }
+
+    .typenav .secend a {
+      cursor: default;
+      font-weight: 700;
+      color: #f10180;
+      padding: 0 15px;
+    }
+
+    .more {
+      margin-left: 5px;
+    }
+
+    .bannerdiv {
+      position: relative;
+      background-image: url("./images/bannerbg.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+
+    .focusbanner {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .focus-banner {
+      width: 1146px;
+      padding: 12px;
+      background: rgba(255, 255, 255, .86);
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 0 1px 3px rgb(167 167 167 / 40%);
+      height: 430px;
+    }
+
+    .focusbanneron {
+      width: 1146px;
+      border-bottom: none;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .focusbanneron ul {
+      height: 400px;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .leftbtn {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 33px;
+      height: 66px;
+      line-height: 66px;
+      margin-top: -33px;
+      border-radius: 2px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .rightbtn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 33px;
+      height: 66px;
+      line-height: 66px;
+      margin-top: -33px;
+      border-radius: 2px;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .trigger {
+      width: 1146px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .trigger ul {
+      display: flex;
+      justify-content: center;
+      width: 1146px;
+    }
+
+    .trigger ul li {
+      font-size: 12px;
+      color: #666;
+      padding: 0 40px;
+      cursor: pointer;
+    }
+
+    .trigger ul em {
+      color: #e8e8e8;
+    }
+
+    .trigger .triggerselected {
+      color: #333;
+    }
+
+    .line {
+      background-color: #e6057d;
+      height: 3px;
+      width: 229px;
+      position: absolute;
+      bottom: -2px;
+      left: 270px;
+    }
+
+    .addiv {
+      margin-top: -2px;
+    }
+
+    .thirddiv {
+      margin-top: -6px;
+      padding-bottom: 24px;
+    }
+
+    .marginleft {
+      margin-left: 14px;
+    }
+
+    .marginleft2 {
+      margin-left: 12px;
+    }
+
+    .daily {
+      margin-bottom: 15px;
+    }
+
+
+
+    .picone {
+      display: flex;
+    }
+
+    .pictwo {
+      display: flex;
+    }
+
+    .picleft {
+      display: flex;
+      width: 600px;
+      height: 332px;
+      background: url("./images/done.jpg") no-repeat;
+      background-size: contain;
+      position: relative;
+    }
+
+    .picright {
+      display: flex;
+      width: 570px;
+      height: 332px;
+      background: url("./images/dtwo.jpg") no-repeat;
+      background-size: contain;
+      position: relative;
+    }
+
+    .pictwoleft {
+      width: 600px;
+      height: 362px;
+      background: url("./images/dthree.jpg") no-repeat;
+      background-size: contain;
+      position: relative;
+    }
+
+    .pictworight {
+      width: 570px;
+      height: 362px;
+      background: url("./images/dfour.jpg") no-repeat;
+      background-size: contain;
+      position: relative;
+    }
+
+    .littlediv {
+      width: 172px;
+      height: 172px;
+      margin-right: 6px;
+      position: relative;
+    }
+
+    .littlediv:first-child {
+      margin-left: 22px;
+    }
+
+    .littlediv img {
+      height: 100%;
+      width: 100%;
+      margin-top: 76px;
+    }
+
+    .whitepic {
+      position: absolute;
+      top: 202px;
+      left: 24px;
+      width: 122px;
+      height: 76px;
+      background: url("./images/4.png") no-repeat;
+      background-size: contain;
+    }
+
+    .whitepic2 {
+      position: absolute;
+      top: 202px;
+      left: 24px;
+      width: 122px;
+      height: 76px;
+      background: url("./images/4.png") no-repeat;
+      background-size: contain;
+    }
+
+    .whitepic3 {
+      position: absolute;
+      top: 202px;
+      left: 24px;
+      width: 122px;
+      height: 76px;
+      background: url("./images/4.png") no-repeat;
+      background-size: contain;
+    }
+
+    .xzf {
+      position: absolute;
+      top: 210px;
+      left: 45px;
+      width: 80px;
+      height: 40px;
+      background: url("./images/5.png") no-repeat;
+      background-size: contain;
+    }
+
+    .hp {
+      position: absolute;
+      top: 210px;
+      left: 45px;
+      width: 80px;
+      height: 40px;
+      background: url("./images/6.png") no-repeat;
+      background-size: contain;
+    }
+
+    .yy {
+      position: absolute;
+      top: 210px;
+      left: 45px;
+      width: 80px;
+      height: 40px;
+      background: url("./images/7.png") no-repeat;
+      background-size: contain;
+    }
+
+    .texttotal {
+      position: absolute;
+      top: 256px;
+      left: 58.5px;
+      font-size: 14px;
+      width: 122px;
+      height: 18px;
+      color: rgb(88, 92, 100);
+      font-family: Microsoft Yahei, Tahoma, Arial, Roboto, Droid Sans, Helvetica Neue, Droid Sans Fallback, Heiti SC, sans-self;
+    }
+
+    .texttotal2 {
+      position: absolute;
+      top: 256px;
+      left: 54.5px;
+      font-size: 14px;
+      width: 122px;
+      height: 18px;
+      color: rgb(88, 92, 100);
+      font-family: Microsoft Yahei, Tahoma, Arial, Roboto, Droid Sans, Helvetica Neue, Droid Sans Fallback, Heiti SC, sans-self;
+    }
+
+    .littlebottom {
+      display: flex;
+    }
+
+    .ltart {
+      width: 50px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 40px;
+      background-color: rgb(240, 56, 103);
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 28px;
+    }
+
+    .price {
+      font-size: 16px;
+      color: black;
+      margin-top: 35px;
+      margin-left: 5px;
+    }
+
+    .littlediv2 {
+      width: 170px;
+      height: 170px;
+      margin-right: 6px;
+      position: relative;
+    }
+
+    .littlediv2 img {
+      width: 100%;
+      margin-top: 76px;
+    }
+
+    .littlediv2 img:first-child {
+      margin-left: 22px;
+    }
+
+    .whitepictwo {
+      width: 100px;
+      height: 60px;
+      background: url("./images/14.jpg") no-repeat;
+      position: absolute;
+      top: 217px;
+      left: 57px;
+    }
+
+    .mst {
+      width: 80px;
+      height: 40px;
+      background: url("./images/15.jpg") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 226px;
+      left: 67px;
+    }
+
+    .ltart2 {
+      width: 50px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 40px;
+      background-color: rgb(240, 56, 103);
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 35px;
+      margin-left: 55px;
+    }
+
+    .price2 {
+      font-size: 16px;
+      color: black;
+      margin-top: 35px;
+      margin-left: 7px;
+    }
+
+    .hq {
+      width: 80px;
+      height: 40px;
+      background: url("./images/16.jpg") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 226px;
+      left: 67px;
+    }
+
+    .sty {
+      width: 80px;
+      height: 40px;
+      background: url("./images/17.jpg") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 226px;
+      left: 67px;
+    }
+
+    .pictwoleft {
+      display: flex;
+    }
+
+    .littlediv3 {
+      width: 170px;
+      height: 170px;
+      margin-right: 8px;
+    }
+
+    .littlediv3 img {
+      width: 100%;
+      margin-top: 106px;
+    }
+
+    .littlediv3 img:first-child {
+      margin-left: 22px;
+    }
+
+    .ltart3 {
+      width: 50px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 40px;
+      background-color: rgb(240, 56, 103);
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 5px;
+      margin-left: 55px;
+    }
+
+    .price3 {
+      font-size: 16px;
+      color: black;
+      margin-top: 5px;
+      margin-left: 7px;
+    }
+
+    .pictworight {
+      display: flex;
+    }
+
+    .littlediv4 {
+      width: 170px;
+      height: 237px;
+      margin-right: 8px;
+    }
+
+    .littlediv4 img {
+      width: 100%;
+      height: 100%;
+      margin-top: 106px;
+    }
+
+    .littlediv4 img:first-child {
+      margin-left: 22px;
+    }
+
+    .ks {
+      width: 172px;
+      height: 172px;
+      background: url("./images/1112.png");
+      background-size: contain;
+      position: absolute;
+      top: 106px;
+      left: 22px;
+    }
+
+    .ks2 {
+      width: 172px;
+      height: 172px;
+      background: url("./images/1113.png");
+      background-size: contain;
+      position: absolute;
+      top: 106px;
+      left: 200px;
+    }
+
+
+    .ks3 {
+      width: 172px;
+      height: 172px;
+      background: url("./images/1114.png");
+      background-size: contain;
+      position: absolute;
+      top: 106px;
+      left: 378px;
+    }
+
+    .top1 {
+      width: 120px;
+      height: 22px;
+      background: url("./images/1115.png");
+      position: absolute;
+      top: 281px;
+      left: 47px;
+    }
+
+    .top11 {
+      width: 120px;
+      height: 22px;
+      background: url("./images/1115.png");
+      position: absolute;
+      top: 281px;
+      left: 225px;
+    }
+
+    .top111 {
+      width: 120px;
+      height: 22px;
+      background: url("./images/1115.png");
+      position: absolute;
+      top: 281px;
+      left: 403px;
+    }
+
+
+    .bottomtext {
+      position: absolute;
+      top: 314px;
+      left: 78px;
+      font-size: 16px;
+      color: rgb(34, 34, 34);
+    }
+
+    .bottomtext2 {
+      position: absolute;
+      top: 314px;
+      left: 256px;
+      font-size: 16px;
+      color: rgb(34, 34, 34);
+    }
+
+    .bottomtext3 {
+      position: absolute;
+      top: 314px;
+      left: 426px;
+      font-size: 16px;
+      color: rgb(34, 34, 34);
+    }
+
+    .twoad {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 45px;
+    }
+
+    .lzt {
+      width: 570px;
+      height: 273px;
+      cursor: pointer;
+    }
+
+    .lzt img {
+      width: 100%;
+    }
+
+    .twoadtext {
+      display: flex;
+    }
+
+    .ff {
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .discount {
+      font-size: 26px;
+      color: #f03867;
+      font-weight: 700;
+      margin-top: -7px;
+    }
+
+    .zq {
+      margin-right: 10px;
+      font-weight: 700;
+      color: #222;
+      font-size: 20px;
+    }
+
+    .txt {
+      font-size: 20px;
+      color: #222;
+      font-weight: 700;
+    }
+
+    .rr {
+      margin-left: 392px;
+    }
+
+    .cc {
+      text-align: center;
+    }
+
+    .fbutton {
+      background-color: #f10180;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+      padding: 0 36px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      margin: 0 3px;
+      font-size: 16px;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .footer {
+      font: 12px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+      background-color: #fcfcfc;
+      color: #4d4d4d;
+      border-top: 1px solid #ebebeb;
+    }
+
+    .footer-inner {
+      width: 960px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .footer-vip {
+      overflow: hidden;
+      margin-left: 79px;
+      display: flex;
+      background: url("./images/footer1.png") no-repeat;
+      margin-top: 30px;
+    }
+
+    .icon1 {
+      width: 72px;
+      height: 75px;
+    }
+
+    .footer-list {
+      overflow: hidden;
+      zoom: 1;
+      margin: 37px 0 25px;
+      line-height: 20px;
+    }
+
+    .footer-list dl dt {
+      margin-bottom: 4px;
+    }
+
+    .footer-list dl {
+      float: left;
+      width: 145px;
+      height: 146px;
+      padding-left: 16px;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .footer-list dl dd {
+      padding-left: 8px;
+      background: url("./images/footer2.png") no-repeat -6px -494px;
+    }
+
+    .footer-list .tc dt {
+      margin-bottom: 4px;
+    }
+
+    .footer-list .tc dd {
+      background: 0 0;
+      padding-left: 0;
+    }
+
+
+    .footer-list .tc {
+      width: 110px;
+      height: 146px;
+      text-align: center;
+      border-right: 0;
+      margin-bottom: 5px;
+    }
+
+    .footer-infor {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 0;
+      clear: both;
+    }
+
+    .footer-infor-link {
+      background-color: #d7237e;
+      line-height: 30px;
+    }
+
+    .footer-infor-link a {
+      color: #fff;
+    }
+
+    .footerweima {
+      border: none;
+      vertical-align: top;
+    }
+
+    .footer-infor-txt {
+      color: #999;
+      margin: 14px 0;
+      line-height: 18px;
+    }
+
+
+
+    .footer-pic {
+      width: 960px;
+      height: 40px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-pic a {
+      display: block;
+    }
+
+    .xiaofei {
+      background: url("./images/footer2.png") no-repeat;
+      width: 99px;
+      background-position: 0 -150px;
+      height: 40px;
+      margin-right: 9px;
+    }
+
+    .buliang {
+      width: 76px;
+      margin-right: 9px;
+      height: 40px;
+      background: url("./images/buliang.png") no-repeat;
+    }
+
+    .chengxin {
+      margin-top: 6px;
+      margin-right: 5px;
+      width: 75px;
+      height: 40px;
+      background: url("./images/chengxin.png") no-repeat;
+      background-size: contain;
+    }
+
+    .kexinwangzhan {
+      background: url("./images/footer2.png") no-repeat 0 -450px;
+      width: 76px;
+      height: 40px;
+      margin-right: 9px;
+    }
+
+    .sidebarright {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      width: 36px;
+      height: 100%;
+      font-family: "Microsoft YaHei";
+    }
+
+    .sidebarcom {
+      position: relative;
+      z-index: 101;
+      height: 100%;
+      background-color: #262626;
+      color: #fff;
+    }
+
+    .sidebarctn {
+      margin-top: -250px;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+
+    .userdiv {
+      width: 36px;
+      margin-bottom: 13px;
+      cursor: pointer;
+    }
+
+    .usericon {
+      background: url("./images/user.png") no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      margin-left: 3px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .usertxt {
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .bagdiv {
+      background-color: #df147f;
+      color: #fff;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .bagicon2 {
+      background: url("./images/gouwudai.png") no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 32px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .bagtxt {
+      width: 14px;
+      font-size: 14px;
+      margin: 0 auto;
+      line-height: 18px;
+      margin-bottom: 6px;
+    }
+
+    .nubicon {
+      background: url("./images/siderbaricon.png") no-repeat;
+      background-position: -230px -59px;
+      width: 20px;
+      height: 24px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .nub {
+      color: #df147f;
+      font-size: 12px;
+      text-align: center;
+      line-height: 22px;
+    }
+
+    .youhuiquandiv {
+      height: 36px;
+      width: 36px;
+      margin-top: 14px;
+    }
+
+    .youhuiquanicon {
+      background: url("./images/youhuiquan.png") no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .shouchangdiv {
+      height: 36px;
+      width: 36px;
+      margin-top: 8px;
+    }
+
+    .shouchangicon {
+      background: url("./images/shouchang.png") no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .wujiaoxingdiv {
+      height: 36px;
+      width: 36px;
+      margin-top: 8px;
+    }
+
+    .wujiaoxingicon {
+      background: url("./images/fivsstar.png") no-repeat;
+      background-size: contain;
+      width: 23px;
+      height: 23px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .wodezujidiv {
+      height: 36px;
+      width: 36px;
+      margin-top: 6px;
+    }
+
+    .wodezujiicon {
+      background: url("./images/wodezuji.png") no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .pencildiv {
+      display: flex;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 9px;
+    }
+
+    .pencilicon {
+      display: block;
+      background: url("./images/pen.png") no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .updiv {
+      display: flex;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 8px;
+    }
+
+    .upicon {
+      background: url("./images/up.png") no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .sidebaerbottom {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+    }
+
+    .downicon {
+      background: url("./images/down.png") no-repeat;
+      background-size: contain;
+      width: 13px;
+      margin-top: 14px;
+      margin-left: -13px;
+    }
+
+    .lefticon {
+      background: url("./images/left.png") no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      margin-top: 18px;
+      margin-left: 1px;
+    }
+
+    .righticon {
+      background: url("./images/right.png") no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      margin-top: 18px;
+      margin-left: 1px;
+    }
+
+    .choicecity {
+      position: absolute;
+      top: 28px;
+      left: 367px;
+      width: 470px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      z-index: 200;
+      display: none;
+    }
+
+    .closecitybox {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+    }
+
+    .explain {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      color: #333;
+    }
+
+    .areatabheader {
+      height: 29px;
+    }
+
+    .areatabheader ul li {
+      display: inline;
+      float: left;
+      margin-left: -1px;
+      width: 68px;
+      text-align: center;
+      cursor: pointer;
+      line-height: 28px;
+      vertical-align: top;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+
+    .areatabbody {
+      padding: 20px 13px 18px;
+      border-top: 1px solid #ccc;
+      color: #333;
+    }
+
+    .areatabbody ul {
+      width: 408px;
+    }
+
+    .areatabbody ul li {
+      width: 68px;
+      float: left;
+      margin-bottom: 2px;
+      color: #333;
+    }
+
+    .areatabbody ul li a {
+      max-width: 46px;
+      display: inline-block;
+      padding: 0 10px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 20px;
+      border: 1px solid #fff;
+      color: #333;
+    }
+
+    .areatabbody .proviceselected {
+      background-color: #f10180;
+      color: #fff;
+    }
+
+    .pleaselogindiv {
+      display: none;
+      position: absolute;
+      top: 26px;
+      left: 767px;
+      width: 280px;
+      padding: 10px 0;
+      border: 1px solid #cdcdcd;
+      z-index: 199;
+      background-color: #fff;
+    }
+
+    .navinf {
+      padding: 15px 20px 0;
+      position: relative;
+      text-align: center;
+      display: flex;
+    }
+
+    .navpic {
+      margin-right: 10px;
+      margin-top: 4px;
+      background: url("./images/sprites-hash.png") no-repeat -164px -142px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
+
+    .topnavpicinfs {
+      border-bottom: #d6d6d6 1px dotted;
+      width: 175px;
+      padding-left: 5px;
+      height: 32px;
+      line-height: 32px;
+      text-align: left;
+      margin-top: 4px;
+    }
+
+    .topnavpicinfstxt {
+      margin-top: -1px;
+    }
+
+    .navinf .topnavpicinfs .topnavpicinfstxt a span {
+      color: #333;
+      margin-left: -5.5px;
+    }
+
+    .topnavlist {
+      line-height: 23px;
+      margin: 12px 11px;
+      padding: 0 0 0 15px;
+    }
+
+    .flex {
+      display: flex;
+      margin: 3px 0;
+    }
+
+    .flex div {
+      width: 121px;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <!-- 头部栏 -->
+    <div class="center h">
+      <div class="citydiv">
+        <div class="city">成都市</div>
+        <div class="cityicon"></div>
+      </div>
+      <!-- 绝对定位区域 -->
+      <div class="choicecity">
+        <p class="explain">请选择你所在的收货地区</p>
+        <div class="areatab">
+          <div class="areatabheader">
+            <ul>
+              <li>省份</li>
+              <li>城市</li>
+            </ul>
+          </div>
+          <div class="areatabbody clearfix">
+            <ul>
+              <li>
+                <a href="###">北京市</a>
+              </li>
+              <li>
+                <a href="###">天津市</a>
+              </li>
+              <li>
+                <a href="###">河北省</a>
+              </li>
+              <li>
+                <a href="###">山西省</a>
+              </li>
+              <li>
+                <a href="###">内蒙古自治区</a>
+              </li>
+              <li>
+                <a href="###">辽宁省</a>
+              </li>
+              <li>
+                <a href="###">吉林省</a>
+              </li>
+              <li>
+                <a href="###">黑龙江省</a>
+              </li>
+              <li>
+                <a href="###">上海市</a>
+              </li>
+              <li>
+                <a href="###">江苏省</a>
+              </li>
+              <li>
+                <a href="###">浙江省</a>
+              </li>
+              <li>
+                <a href="###">安徽省</a>
+              </li>
+              <li>
+                <a href="###">福建省</a>
+              </li>
+              <li>
+                <a href="###">江西省</a>
+              </li>
+              <li>
+                <a href="###">山东省</a>
+              </li>
+              <li>
+                <a href="###">河南省</a>
+              </li>
+              <li>
+                <a href="###">湖北省</a>
+              </li>
+              <li>
+                <a href="###">湖南省</a>
+              </li>
+              <li>
+                <a href="###">广东省</a>
+              </li>
+              <li>
+                <a href="###">广西壮族自治区</a>
+              </li>
+              <li>
+                <a href="###">海南省</a>
+              </li>
+              <li>
+                <a href="###">重庆市</a>
+              </li>
+              <li>
+                <a href="###" class="proviceselected">四川省</a>
+              </li>
+              <li>
+                <a href="###">贵州省</a>
+              </li>
+              <li>
+                <a href="###">云南省</a>
+              </li>
+              <li>
+                <a href="###">西藏自治区</a>
+              </li>
+              <li>
+                <a href="###">陕西省</a>
+              </li>
+              <li>
+                <a href="###">甘肃省</a>
+              </li>
+              <li>
+                <a href="###">青海省</a>
+              </li>
+              <li>
+                <a href="###">宁夏回族自治区</a>
+              </li>
+              <li>
+                <a href="###">新疆维吾尔自治区</a>
+              </li>
+            </ul>
+          </div>
+          <a href="###" class="closecitybox">
+            <img src="./images/x.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li>
+            <a href="#" class="plogin">请登录</a>
+            <div class="ems"></div>
+            <div class="pleaselogindiv clearfix">
+              <div class="navinf">
+                <div class="navpic"></div>
+                <div class="topnavpicinfs ">
+                  <p class="topnavpicinfstxt">
+                    <a href="https://passport.vip.com/login">
+                      <span>您好！ </span>
+                      <span style="margin-left: 0.1px;">[请登录]</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="topnavlist">
+                <div class="flex">
+                  <div>我的收藏</div>
+                  <div>我的订单</div>
+                </div>
+                <div class="flex">
+                  <div>零钱</div>
+                  <div>我的优惠券</div>
+                </div>
+                <div class="flex">
+                  <div>我的唯品币</div>
+                  <div>唯品金融</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="register">注册</a>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <div class="gif">
+              <img src="./images/header_sign-hash.gif" alt="">
+            </div>
+            <a href="#" class="gifdiv">
+              签到有礼
+            </a>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <a href="#" class="order">我的订单</a>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <a href="#" class="special">我的特卖</a>
+            <div class="triangleicon"></div>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <a href="#" class="club">会员俱乐部</a>
+            <div class="triangleicon"></div>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <a href="#" class="service">客户服务</a>
+            <div class="triangleicon2"></div>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <div class="phone"></div>
+            <a href="#" class="mobileversion">手机版</a>
+            <div class="ems"></div>
+          </li>
+          <li>
+            <a href="#">更多</a>
+            <div class="triangleicon"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="logodiv center">
+    <div class="logo">
+      <img src="./images/logo.png" alt="">
+    </div>
+    <div class="promise">
+      <a href="https://h5rsc.vip.com/h5rscSupportInsuranc/h5rscSupportInsuranc/index.html"></a>
+      <a href="https://www.vip.com/"></a>
+      <a href="https://help.vip.com/commitment.php"></a>
+    </div>
+    <div class="searchdiv">
+      <div class="inputdiv">
+        <input type="text" placeholder="女式休闲裤" />
+        <div class="button">
+          <div class="img"></div>
+        </div>
+      </div>
+      <div class="hotword">
+        <ul>
+          <li>
+            <a href="#">女式休闲裤</a>
+            <em>|</em>
+          </li>
+          <li>
+            <a href="#">耐克Nike</a>
+            <em>|</em>
+          </li>
+          <li>
+            <a href="#">护肤套装</a>
+            <em>|</em>
+          </li>
+          <li>
+            <a href="#">女式T恤</a>
+            <em>|</em>
+          </li>
+          <li>
+            <a href="#">女式闲鞋</a>
+            <em>|</em>
+          </li>
+          <li>
+            <a href="#">斐乐FILA</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="shoppingbag">
+      <div class="bagicon"></div>
+      <a href="#">购物袋</a>
+      <div class="num">
+        <div>0</div>
+      </div>
+    </div>
+  </div>
+  <div class="center typenav">
+    <ul>
+      <li class="first">
+        <a href="#">商品分类</a>
+      </li>
+      <li class="secend"><a href="#">推荐</a></li>
+      <li><a href="#">3折疯抢</a></li>
+      <li><a href="#">唯品快抢</a></li>
+      <li><a href="#">唯品奥莱</a></li>
+      <li><a href="#">女装</a></li>
+      <li><a href="#">运动</a></li>
+      <li><a href="#">鞋包</a></li>
+      <li><a href="#">美妆</a></li>
+      <li><a href="#">母婴</a></li>
+      <li><a href="#">男装</a></li>
+      <li><a href="#">电器</a></li>
+      <li><a href="#">首饰</a></li>
+      <li class="more">
+        <a href="#">更多</a>
+        <div class="downicon"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="bannerdiv">
+    <div class="focusbanner">
+      <div class="focus-banner">
+        <div class="focusbanneron">
+          <ul>
+            <li>
+              <a
+                href="https://mst.vip.com/7pp4tGOzssTqPfkfDi045Q.php?wapid=mst_100061381&_src=mst&extra_banner=0&nova=1&nova_platform=2&mst_page_type=guide">
+                <img src="./images/banner1.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mst.vip.com/BTb80GfCq7ffl1Ml4h2YVA.php?wapid=mst_100061977&_src=mst&extra_banner=115061977&nova=1&nova_platform=2&mst_page_type=guide">
+                <img src="./images/banner2.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mst.vip.com/UXRPTOQ_ZlQetbsgb0BnqA.php?wapid=mst_100062800&_src=mst&extra_banner=0&nova=1&nova_platform=2&mst_page_type=guide">
+                <img src="./images/banner3.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+          <span class="leftbtn">
+            <div class="lefticon"></div>
+          </span>
+          <span class="rightbtn">
+            <div class="righticon"></div>
+          </span>
+        </div>
+        <div class="trigger">
+          <ul>
+            <li class="triggerselected">欧莱雅集团 爆款至高买一送一</li>
+            <em>|</em>
+            <li>超级品类日 焕新内衣</li>
+            <em>|</em>
+            <li>暖春健身 跑步鞋低至99元</li>
+          </ul>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="addiv center">
+    <img src="./images/neiyi.jpg" alt="">
+  </div>
+  <div class="thirddiv center">
+    <img src="./images/内衣1.jpg" alt="">
+    <img src="./images/内衣2.jpg" alt="" class="marginleft">
+    <img src="./images/内衣3.jpg" alt="" class="marginleft2">
+  </div>
+  <div class="daily center">
+    <img src="./images/meiribikan.jpg" alt="">
+  </div>
+  <div class="picdiv center">
+    <div class="picone">
+      <div class="picleft">
+        <div class="littlediv">
+          <img src="./images/1.jpg" alt="">
+          <div class="whitepic"></div>
+          <div class="xzf"></div>
+          <span class="texttotal">共294款</span>
+          <div class="littlebottom">
+            <div class="ltart">特卖价</div>
+            <div class="price">¥179</div>
+          </div>
+        </div>
+        <div class="littlediv">
+          <img src="./images/2.jpg" alt="">
+          <div class="whitepic2"></div>
+          <div class="hp"></div>
+          <span class="texttotal2">共2119款</span>
+          <div class="littlebottom">
+            <div class="ltart">特卖价</div>
+            <div class="price">¥89</div>
+          </div>
+        </div>
+        <div class="littlediv">
+          <img src="./images/3.jpg" alt="">
+          <div class="whitepic3"></div>
+          <div class="yy"></div>
+          <span class="texttotal">共914款</span>
+          <div class="littlebottom">
+            <div class="ltart">特卖价</div>
+            <div class="price">¥165</div>
+          </div>
+        </div>
+      </div>
+      <div class="picright">
+        <div class="littlediv2">
+          <img src="./images/11.jpg" alt="">
+          <div class="whitepictwo"></div>
+          <div class="mst"></div>
+          <div class="littlebottom">
+            <div class="ltart2">特卖价</div>
+            <div class="price2">¥49</div>
+          </div>
+        </div>
+        <div class="littlediv2">
+          <img src="./images/12.jpg" alt="">
+          <div class="whitepictwo"></div>
+          <div class="hq"></div>
+          <div class="littlebottom">
+            <div class="ltart2">特卖价</div>
+            <div class="price2">¥99</div>
+          </div>
+        </div>
+        <div class="littlediv2">
+          <img src="./images/13.jpg" alt="">
+          <div class="whitepictwo"></div>
+          <div class="sty"></div>
+          <div class="littlebottom">
+            <div class="ltart2">特卖价</div>
+            <div class="price2">¥111</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pictwo">
+      <div class="pictwoleft">
+        <div class="littlediv3">
+          <img src="./images/111.jpg" alt="">
+          <div class="littlebottom">
+            <div class="ltart3">特卖价</div>
+            <div class="price3">¥65</div>
+          </div>
+        </div>
+        <div class="littlediv3">
+          <img src="./images/112.jpg" alt="">
+          <div class="littlebottom">
+            <div class="ltart3">特卖价</div>
+            <div class="price3">¥309</div>
+          </div>
+        </div>
+        <div class="littlediv3">
+          <img src="./images/113.jpg" alt="">
+          <div class="littlebottom">
+            <div class="ltart3">特卖价</div>
+            <div class="price3">¥105</div>
+          </div>
+        </div>
+      </div>
+      <div class="pictworight">
+        <div class="littlediv4">
+          <img src="./images/1111.jpg" alt="">
+          <div class="ks"></div>
+          <div class="top1"></div>
+          <div class="bottomtext">运动鞋</div>
+        </div>
+        <div class="littlediv4">
+          <img src="./images/1111.jpg" alt="">
+          <div class="ks2"></div>
+          <div class="top11"></div>
+          <div class="bottomtext2">连衣裙</div>
+        </div>
+        <div class="littlediv4">
+          <img src="./images/1111.jpg" alt="">
+          <div class="ks3"></div>
+          <div class="top111"></div>
+          <div class="bottomtext3">护肤套装</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="twoad center">
+    <div class="lzt">
+      <img src="./images/lzt1.jpg" alt="">
+    </div>
+    <div class="lzt">
+      <img src="./images/lzt2.jpg" alt="">
+    </div>
+  </div>
+  <div class="twoadtext center">
+    <div class="ff">
+      <div class="discount">1</div>
+      <div class="zq">折起</div>
+      <div class="txt">太平鸟男装专场</div>
+    </div>
+    <div class="ff rr">
+      <div class="discount">2.4</div>
+      <div class="zq">折起</div>
+      <div class="txt">D'ZZIT女装专场</div>
+    </div>
+  </div>
+  <!-- 要改样式 -->
+  <div class="center cc">
+    <span class="fbutton">点击查看更多 >></span>
+  </div>
+  <div class="footer">
+    <div class="footer-inner">
+      <ul class="footer-vip">
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+        <li>
+          <div class="icon1"></div>
+        </li>
+      </ul>
+      <div class="footer-list">
+        <dl>
+          <dt>服务保障</dt>
+          <dd>
+            <a href="https://h5rsc.vip.com/h5rscSupportInsuranc/h5rscSupportInsuranc/index.html"
+              target="_blank">正品保证</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/commitment.php" target="_blank">7天无理由放心退</a>
+          </dd>
+          <dd>
+            <a href="https://acs.vip.com/" target="_blank">7x15小时客户服务</a>
+          </dd>
+          <dd>
+            <a href="https://h5rsc.vip.com/h5rscChangeProduct/h5rscChangeProduct/index.html"
+              target="_blank">7天无理由随心换</a>
+          </dd>
+          <dd></dd>
+        </dl>
+        <dl>
+          <dt>购物指南</dt>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=308" target="_blank">导购演示</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=330" target="_blank">订单操作</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=206" target="_blank">会员注册</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=329" target="_blank">账户管理</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=104" target="_blank">收货样品</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?cid=69" target="_blank">会员等级</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>支付方式</dt>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=336" target="_blank">23家主流网银支付</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=336" target="_blank">支付宝、银联等支付</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=336" target="_blank">信用卡支付</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=335" target="_blank">零钱支付</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>配送方式</dt>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=345" target="_blank">配送范围及运费</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=63" target="_blank">验货与签收</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>售后服务</dt>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?cid=74" target="_blank">退货政策</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=236" target="_blank">退货流程</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?type=detail&id=317" target="_blank">退款方式和时效</a>
+          </dd>
+          <dd>
+            <a href="https://help.vip.com/themelist.php?cid=146" target="_blank">换货服务</a>
+          </dd>
+        </dl>
+        <dl class="tc last">
+          <dt>唯品会App二维码</dt>
+          <dd>
+            <img src="./images/erweima.jpg" alt="" width="100" height="100" class="footerweima">
+          </dd>
+          <dd>下载唯品会移动app</dd>
+        </dl>
+      </div>
+      <div class="footer-infor">
+        <div class="footer-infor-link">
+          <a href="https://www.vip.com/about-us" target="_blank" title="关于我们">关于我们</a>
+          |
+          <a href="https://www.vip.com/en/about-us" title="About us">About us</a>
+          |
+          <a href="http://ir.vip.com/" title="Investor Relations">Investor Relations</a>
+          |
+          <a href="https://blog.vip.com/?r=/Blog/HTML_showList/sort_id//29" title="媒体报道">媒体报道</a>
+          |
+          <a href="https://vis.vip.com/stipulate/" title="品牌招商">品牌招商</a>
+          |
+          <a href="https://rule.vip.com/" title="平台规则">平台规则</a>
+          |
+          <a href="https://www.vip.com/privacy" title="隐私条款">隐私条款</a>
+          |
+          <a href="https://job.vip.com/" title="唯品诚聘">唯品诚聘</a>
+          |
+          <a href="https://detail.vip.com/vipcard.html" title="唯品卡">唯品卡</a>
+          |
+          <a href="https://www.vip.com/contact-us" title="联系我们">联系我们</a>
+          |
+          <a href="https://lapp.corp.vipshop.com:8013/Integrity-Report/?qd=GW" title="廉正举报">廉正举报</a>
+        </div>
+        <div class="footer-infor-txt">
+          Copyright © 2008-现在 vip.com，All Rights Reserved 使用本网站即表示接受
+          <a href="https://h5rsc.vip.com/h5rscSupportClause/h5rscSupportClause/index.html" target="_blank">唯品会用户协议</a>
+          。版权所有
+          <a href="https://www.vip.com/" target="_blank">广州唯品会电子商务有限公司</a>
+          <br />
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010302111111" target="_blank">
+            <img src="./images/police_icon.png" alt="" width="14" height="14" style="margin:2px 3px 0 0">
+            粤公网安备 44010302111111号
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备08114786号</a>
+          <a href="https://h5rsc.vip.com/h5rscActValueAddedSe/h5rscActValueAddedSe/index.html"
+            target="_blank">增值业务经营许可证：粤B2-20170777 </a>
+          <a href="https://a.vpimg2.com/upload/merchandise/pdcvis/2021/09/26/21/202109261150384052189.jpg"
+            target="_blank">网络文化经营许可证：粤网文〔2021〕2056-282号</a>
+          <br />
+          <a href="https://h5rsc.vip.com/h5rscActBusinessLice/h5rscActBusinessLice/index.html"
+            target="_blank">经营主体证照</a>
+          &nbsp;&nbsp;
+          <a href="https://help.vip.com/themelist.php?type=detail&id=475" target="_blank">风险监测信息</a>
+          &nbsp;&nbsp;
+          <a href="https://h5rsc.vip.com/h5rscActDrugInfoLice/h5rscActDrugInfoLice/index.html"
+            target="_blank">互联网药品信息服务资格证书：（粤）-经营性-2018-0271</a>
+          <a href="https://h5rsc.vip.com/h5rscActFoodTradeLic/h5rscActFoodTradeLic/index.html" target="_blank">
+            网络食品交易第三方平台备案凭证：粤B2-20170777 </a>
+          <a href="https://h5rsc.vip.com/h5rscActInstrumentTr/h5rscActInstrumentTr/index.html"
+            target="_blank">医疗器械网络交易服务第三方平台备案凭证：（粤）网械平台备字[2019]第00001号</a>
+          <span style="color:#808080">出版物网络交易平台服务经营备案证：粤新出网备（2021）1号</span>
+          <span>
+            &nbsp;
+            <a href="http://www.gdjubao.cn/jb/?harm_type=18" target="_blank">未成年人关怀专区</a>
+          </span>
+          <br />
+          <span style="color:#808080">
+            违法和不良信息举报电话：4006789888；举报邮箱：
+            <a href="mailto:privacy@vipshop.com" target="_blank">privacy@vipshop.com</a>
+          </span>
+        </div>
+      </div>
+      <div class="footer-ft">
+        <div class="footer-pic">
+          <a href="https://weiquan.vip.com/" title="消费维权服务站" target="_blank">
+            <div class="xiaofei"></div>
+          </a>
+          <a href="https://www.12377.cn/" target="_blank" title="不良信息举报中心">
+            <div class="buliang"></div>
+          </a>
+          <a href="https://xyt.xinchacha.com/pcinfo?sn=1438061342068367360&certType=4" target="_blank">
+            <div class="chengxin"></div>
+          </a>
+          <a href="" target="_blank">
+            <div class="kexinwangzhan"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 右侧黑栏 -->
+  <div class="sidebarright">
+    <div class="sidebarcom">
+      <div class="sidebarctn">
+        <div class="userdiv">
+          <div class="usericon"></div>
+          <div class="usertxt">账号</div>
+        </div>
+        <div class="bagdiv">
+          <div class="bagicon2"></div>
+          <div class="bagtxt">购物袋</div>
+          <div class="nubicon">
+            <div class="nub">0</div>
+          </div>
+        </div>
+        <div class="youhuiquandiv">
+          <div class="youhuiquanicon"></div>
+        </div>
+        <div class="shouchangdiv">
+          <div class="shouchangicon"></div>
+        </div>
+        <div class="wujiaoxingdiv">
+          <div class="wujiaoxingicon"></div>
+        </div>
+        <div class="wodezujidiv">
+          <div class="wodezujiicon"></div>
+        </div>
+      </div>
+      <div class="sidebaerbottom">
+        <div class="pencildiv">
+          <div class="pencilicon"></div>
+        </div>
+        <div class="updiv">
+          <div class="upicon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

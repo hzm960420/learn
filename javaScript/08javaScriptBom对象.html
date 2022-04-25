@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    bom = browser object model
+    核心对象是window
+    BOM 缺乏标准，JavaScript 语法的标准化组织是 ECMA, DOM 的标准化组织是 W3C, BOM最初是Netscape 浏览器标准的一部分
+  </div>
+  <div>
+    bom的构成：window - document - location - navigation - screen - history
+  </div>
+  <div>
+    window对象的常见事件
+    window.onload - 窗口加载事件
+    document.addEventListener('DOMContentLoaded',function(){}) - 窗口加载事件
+    window.onresize - 调整窗口大小事件
+  </div>
+
+  <div>
+    1.窗口加载事件
+    （1） window.onload - 当文档内容加载完毕后会出发该事件（包括图像、脚本、css文件等），就调用的处理函数
+    注意：
+    有了window.onload就可以把JS代码写到页面元素的上方
+    因为onload是等页面内容全部加载完毕，再去执行处理函数
+    window.onload 传统注册事件方式，只能写一次
+    如果有多个，会以最后一个window.onload为准
+    （2）document.addEventListener('DOMContentLoaded',function(){})
+    接收两个参数：
+    DOMCountentLoaded事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等
+    如果页面的图片很多的话, 从用户访问到onload触发可能需要较长的时间
+    交互效果就不能实现，必然影响用户的体验，此时用 DOMContentLoaded事件比较合适。
+    (3)load和DOMContentLoaded的区别
+    load是页面加载完后调用 包括了图片 视频 flash css等 DOMContentLoaded是等dom加载完就调用 比load加载快
+  </div>
+
+  <div>
+    2.调整窗口大小事件
+    window.onresize = function (){}
+    window.addEventListener('resize',function(){})
+  </div>
+
+  <div>
+    3.定时器
+    window对象给我们提供了两个定时器
+    setTimeout()
+    setInterval()
+    (1)setTimeout()方法用于设置一个定时器，该定时器延时到期后执行函数
+    window.setTimeout(调用函数,[延迟的毫秒数]);
+    注意：
+    window可以省略
+    这个调用函数
+    可以直接写函数
+    或者写函数名
+    或者采取字符串 ‘函数名()’ （不推荐）
+    延迟的毫秒数省略默认是0，如果写，必须是毫秒
+    因为定时器可能有很多，所以我们经常给定时器赋值一个标识符
+    setTimeout() 这个调用函数我们也称为回调函数 callback
+    普通函数是按照代码顺序直接调用，而这个函数，需要等待事件，事件到了才会去调用这个函数，因此称为回调函数。
+
+    clearTimeout() 停止定时器
+    clearTimeout()方法取消了先前通过调用 setTimeout()建立的定时器
+
+    (2)setInterval()方法重复调用一个函数，每隔这个时间，就去调用一次回调函数
+    window.setInterval(回调函数,[间隔的毫秒数]);
+    indow可以省略
+    这个回调函数:
+    可以直接写函数
+    或者写函数名
+    或者采取字符 ‘函数名()’
+    第一次执行也是间隔毫秒数之后执行，之后每隔毫秒数就执行一次
+
+    clearInterval()停止定时器
+  </div>
+
+  <div>
+    this指向问题
+    1.全局作用域或者普通函数中 this 指向全局对象window (注意 定时器this指向window)
+    2.方法调用中 谁调用 this指向谁
+    3.构造函数中this指向构造函数实例 new 出来的
+  </div>
+
+  <div>
+    location对象：window 对象给我们提供了一个 location属性用于获取或者设置窗体的url，并且可以解析url。因为这个属性返回的是一个对象，所以我们将这个属性也称为 location 对象。
+    （1）location对象属性- 重点记url和search
+    location.href - 获取或者设置整个URL
+    location.host - 返回主机名
+    location.port - 返回端口号
+    location.pathname - 返回路径
+    location.search - 返回参数
+    location.hash - 返回片段
+    （2）location对象方法
+    location.assign() - 跟href一样，可以跳转页面（也称为重定向页面）
+    location.replace() - 替换当前页面，因为不记录历史，所以不能后退页面
+    location.reload() - 重新加载页面，相当于刷新按钮或者 f5 ，如果参数为true 强制刷新 ctrl+f5
+  </div>
+
+  <div>
+    url：统一资源定位符（uniform resouce locator）
+  </div>
+
+  <div>
+    navigator对象
+    navigator 对象包含有关浏览器的信息，它有很多属性
+    我们常用的是userAgent,该属性可以返回由客户机发送服务器的user-agent头部的值
+    if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows
+    Phone)/i))) {
+    window.location.href = ""; //手机
+    } else {
+    window.location.href = ""; //电脑
+    }
+  </div>
+
+
+  <div>
+    history对象
+    window 对象给我们提供了一个 history 对象，与浏览器历史记录进行交互
+    该对象包含用户（在浏览器窗口中）访问过的 URL。
+    history对象方法
+    back() - 可以后退
+    forward() - 前进功能
+    go(参数) - 前进后退功能 参数如果是1 前进一个页面 如果是-1 后退一个页面
+  </div>
+</body>
+<script>
+  // window.onload = function() {
+  //   console.log(window.innerWidth); // 当前屏幕宽度
+  // }
+
+  // 1.全局作用域或者普通函数中this指向全局对象window
+  console.log(this);
+
+  function fn () {
+    console.log(this);
+  }
+
+  fn()
+
+  window.setTimeout(function() {
+    console.log(this);
+  }, 1000);
+
+  var object = {
+    sayHi: function() {
+      console.log(this)
+    }
+  }
+
+  object.sayHi();
+
+  function Fun () {
+    console.log(this); // this 指向的是fun 实例对象
+  }
+  var fun = new Fun();
+</script>
+
+</html>

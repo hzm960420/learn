@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户登录-58同城</title>
+  <link rel="stylesheet" href="./css/58.css">
+  <link rel="stylesheet" href="./css/nousername.css">
+</head>
+
+<body>
+  <div class="bg">
+    <img src="./images/reg-bg.png" alt="" class="bg">
+  </div>
+  <div class="overflow">
+    <div class="title">
+      <div>
+        <a href="https://cd.58.com/">
+          返回首页
+        </a>
+      </div>
+      <div class="nouser" onclick="toRegister()">没有账号？去注册</div>
+    </div>
+    <div class="body">
+      <div class="bodyheader">
+        <div class="saomadenglu" onclick="changelogintext()">扫码登录</div>
+        <div>
+          <img src="./images/erweima@2x.png" alt="" class="erweima" onmouseover="iconin()" onmouseout="iconout()"
+            onclick="changelogintext()">
+        </div>
+      </div>
+      <div class="bodytitle">
+        <img src="./images/logo.png" alt="">
+      </div>
+      <div class="content">
+        <div class="bodycontent">
+          <div onclick="colorchange(0)" class="text">账号密码登录</div>
+          <div onclick="colorchange(1)" class="text">手机动态码登录</div>
+        </div>
+        <div class="bodyinput">
+          <input type="text" placeholder="账号名" class="textinput" onfocus="openborder(0)" onblur="closeborder(0)"
+            oninput="inputchange()" />
+          <div class="getcode" onclick="getcurrectcode(this)">获取动态码</div>
+        </div>
+        <div class="warningdiv">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont" style="float: left;">您还未输入用户名</div>
+        </div>
+        <div class="bodyinput2">
+          <input type="password" placeholder="密码" class="textinput" onfocus="openborder(1)" onblur="closeborder(1)"
+            oninput="showactive()" />
+          <img src="./images/user-list-hide.png" alt="" class="eyes" onclick="picchange()">
+          <img src="./images/close_active.png" alt="" class="closeactive" onclick="valuedelete()">
+        </div>
+        <div class="warningdiv">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont" style="float: left;">您还未输入密码</div>
+        </div>
+        <div class="checkdiv">
+          <div class="checkleft">
+            <div>
+              <img src="./images/user-list-uncheck.png" alt="" class="uncheckicon" onclick="iconchange(0)">
+            </div>
+            <div class="onefont">记住密码</div>
+            <div>
+              <img src="./images/user-list-uncheck.png" alt="" class="uncheckicon" onclick="iconchange(1)">
+            </div>
+            <div class="twofont">下次自动登录</div>
+          </div>
+          <div class="checkright">
+            <a href="https://passport.58.com/forgetpassword?path=https%3A%2F%2Fcd.58.com%2F%3Futm_source%3Dmarket%26spm%3Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%26pts%3D1645689069983&isredirect=false&source=58-homepage-pc"
+              class="forgetpassword">忘记密码</a>
+          </div>
+        </div>
+        <div class="buttonDiv">
+          登录
+        </div>
+        <div class="utilsDiv">
+          <div class="icons" onmouseover="iconshow(0)" onmouseout="iconhidden(0)">
+            <a
+              href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&autoLogin=0&response_type=code&client_id=200065&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=wAku-2C96mrKhtMRUS4OvOvaJzF_AhDP&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fqzone%3Fbll%3Doauthlogin%26path%3Dhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%26source%3D58-homepage-pc%26appid%3D200065%26isredirect%3Dfalse">
+              <div>
+                <img src="./images/qq@2x.png" alt="" class="threes">
+              </div>
+            </a>
+            <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&autoLogin=0&response_type=code&client_id=200065&scope=get_user_info,get_qq_level,get_info,list_album,get_fanslist&state=wAku-2C96mrKhtMRUS4OvOvaJzF_AhDP&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fqzone%3Fbll%3Doauthlogin%26path%3Dhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%26source%3D58-homepage-pc%26appid%3D200065%26isredirect%3Dfalse"
+              class="tfonta">
+              <div class="tfont">QQ登录</div>
+            </a>
+          </div>
+          <div class="icons" onmouseover="iconshow(1)" onmouseout="iconhidden(1)">
+            <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx037165e7e9272f37&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fweixin%3Fbll%3Doauthlogin%26path%3Dhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%26source%3D58-homepage-pc%26appid%3Dwx037165e7e9272f37%26isredirect%3Dfalse&response_type=code&scope=snsapi_login&state=WJrHF8ESEbNNU_0YOUb3jTdVGkv0ip_3"
+              class="tfonta">
+              <div>
+                <img src="./images/weixin@2x.png" alt="" class="threes">
+              </div>
+            </a>
+            <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx037165e7e9272f37&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fweixin%3Fbll%3Doauthlogin%26path%3Dhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%26source%3D58-homepage-pc%26appid%3Dwx037165e7e9272f37%26isredirect%3Dfalse&response_type=code&scope=snsapi_login&state=WJrHF8ESEbNNU_0YOUb3jTdVGkv0ip_3"
+              class="tfonta">
+              <div class="tfont">微信登录</div>
+            </a>
+          </div>
+          <div class="icons" onmouseover="iconshow(2)" onmouseout="iconhidden(2)">
+            <a href="https://api.weibo.com/oauth2/authorize?client_id=2563496436&scope=all&forcelogin=true&response_type=code&state=4moDO4rexvZcwtIrGhOBWj5xL6wRWD6b&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fsina%3Fbll%3Doauthlogin%3Bhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%3B58-homepage-pc%3B2563496436%3Bfalse###"
+              class="tfonta">
+              <div>
+                <img src="./images/weibo@2x.png" alt="" class="threes">
+              </div>
+            </a>
+            <a href="https://api.weibo.com/oauth2/authorize?client_id=2563496436&scope=all&forcelogin=true&response_type=code&state=4moDO4rexvZcwtIrGhOBWj5xL6wRWD6b&redirect_uri=https%3A%2F%2Fpassport.58.com%2Fthd%2F58%2Fmidpage%2Fpc%2Fsina%3Fbll%3Doauthlogin%3Bhttps%253A%252F%252Fcd.58.com%252F%253Futm_source%253Dmarket%2526spm%253Du-2d2yxv86y3v43nkddh1.BDPCPZ_BT%2526pts%253D1645754872540%3B58-homepage-pc%3B2563496436%3Bfalse###"
+              class="tfonta">
+              <div class="tfont">微博登录</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body2">
+      <div class="bodyheader">
+        <div class="saomadenglu" onclick="changelogintext2()">密码登录</div>
+        <div>
+          <img src="./images/PC@2x.png" alt="" class="pcpic" onmouseover="iconin2()" onmouseout="iconout2()"
+            onclick="changelogintext2()">
+        </div>
+      </div>
+      <div class="bodytitle">
+        <img src="./images/logo.png" alt="">
+      </div>
+      <div class="titles">1秒即登录，方便又安全</div>
+      <div class="clearfloat">
+        <img src="./images/daerweima.png" alt="" class="bigerweima" onmousemove="picchange2(0)">
+      </div>
+      <div class="twopic" onmouseout="picchange2(1)">
+        <img src="./images/daerweima.png" alt="" class="bigerweima2">
+        <div class="phonepic"></div>
+      </div>
+      <div class="bottomflex">
+        <div class="xinxi">58扫码登录，同步账号信息</div>
+        <div class="download">下载 <a href="https://down.58.com/home.html">58APP</a></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>© 58.com</div>
+      <div class="kefu">
+        <a href="https://ai.58.com/pc/#/entry/scene_id=2&joinfrom=login">
+          联系客服
+        </a>
+      </div>
+      <div class="help">
+        <a href="https://helps.58.com/base/home?siteId=5601&terminal=PC&sourceType=58pc-dl-bz">
+          帮助
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="nousernamediv">
+    <div class="title">
+      <div>
+        <a href="https://cd.58.com/">
+          返回首页
+        </a>
+      </div>
+      <div class="hasuser" onclick="returnlogin()">已有账号？去登录</div>
+    </div>
+    <div class="userbody">
+      <div>
+        <img src="./images/logo.png" alt="" class="usericons">
+      </div>
+      <div class="centerdiv">
+        <div class="inputdiv">
+          <input type="text" placeholder="手机号" class="phonenum inputleft" onfocus="changeborder(0)"
+            onblur="downborder(0)" oninput="inputchange2()">
+          <div class="getdtcode" onclick="getcode()">获取动态码</div>
+        </div>
+        <div class="soluve"></div>
+        <div class="userwarningdiv warnshow">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon ">
+          </div>
+          <div class="warningfont2" style="float: left;">请输入手机号</div>
+        </div>
+        <div class="inputdiv">
+          <input type="text" placeholder="动态码" class="dongtaima inputleft" onfocus="changeborder(1)"
+            onblur="downborder(1)">
+        </div>
+        <div class="soluve"></div>
+        <div class="userwarningdiv warnshow">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont2" style="float: left;">请输入正确的手机动态码</div>
+        </div>
+        <div class="inputdiv">
+          <input type="text" placeholder="用户名" class="username inputleft" onfocus="changeborder(2)"
+            onblur="downborder(2)">
+        </div>
+        <div class="warningtext">用户名：4-20个字符，支持汉字、字母、数字2种及以上组合</div>
+        <div class="userwarningdiv2 warnshow">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont2" style="float: left;">您还未输入用户名</div>
+        </div>
+        <div class="inputdiv">
+          <input type="password" placeholder="设置密码" class="setpassword inputleft" onfocus="changeborder(3)"
+            onblur="downborder(3)">
+        </div>
+        <div class="warningtext">密码：8-16个非连续或重复的字符</div>
+        <div class="userwarningdiv warnshow">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont2" style="float: left;">您还未输入密码</div>
+        </div>
+        <div class="inputdiv">
+          <input type="password" placeholder="确认密码" class="confirmpassword inputleft" onfocus="changeborder(4)"
+            onblur="downborder(4)">
+        </div>
+        <div class="userwarningdiv warnshow">
+          <div style="float: left;">
+            <img src="./images/flerroricon.png" alt="" class="warningicon">
+          </div>
+          <div class="warningfont2" style="float: left;">您还未输入密码</div>
+        </div>
+        <div class="acceptDiv">
+          <div>
+            <img src="./images/user-list-uncheck.png" alt="" class="uncheckicons" onclick="changeicon()">
+          </div>
+          <div class="acceptfont">
+            已阅并同意
+            <a
+              href="https://helps.58.com/rules/detail?siteId=5502&terminal=PC&contentId=302338&sourceType=58pc-zz-khfw-khbzqt&spReturn=1">《58同城使用协议》</a>
+            &
+            <a
+              href="https://helps.58.com/rules/detail?siteId=5502&terminal=PC&contentId=302337&sourceType=58pc-zz-khfw-khbzqt&spReturn=1">《隐私政策》</a>
+          </div>
+        </div>
+        <div class="confirmDiv">确定</div>
+      </div>
+    </div>
+    <div class="ufooter">
+      <div>© 58.com</div>
+      <div style="margin-left:-15px;" class="kefu">
+        <a href="https://ai.58.com/pc/#/entry/scene_id=2&joinfrom=login">
+          联系客服
+        </a>
+      </div>
+      <div class="help">
+        <a href="https://helps.58.com/base/home?siteId=5601&terminal=PC&sourceType=58pc-dl-bz">
+          帮助
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/58.js"></script>
+<script src="./js/nousername.js"></script>
+
+</html>

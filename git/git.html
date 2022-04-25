@@ -1,0 +1,132 @@
+##git特性##
+1.直接记录快照，而非差异比较
+2.近乎所有操作都是本地执行
+
+## git中的三个区域 ##
+1.工作区 暂存区 Git仓库
+
+## git中的三个状态##
+1.已修改 modified - 修改了文件 ,但是还没将修改的结果放到暂存区
+2.已暂存 staged - 标识对已修改文件的当前版本做了标记，使之包括在下次提交的列表中
+3.已提交 committed - 表示文件已经安全地保存在本地的Git仓库中
+
+## 基本的git工作流程 ##
+1.在工作区中修改文件
+2.将下次提交的更改进行暂存
+3.提交更新，找到暂存区的文件，将快照永久性存储到Git仓库
+
+
+## 配置用户信息 ##
+用户名和邮件地址
+git config --global user.name "hzm"
+git config --global user.email "441695580@qq.com"
+
+## git全局配置文件 ##
+C:/User/用户名文件夹/.gitconfig
+
+# 查看所有全局配置项
+git config --list --global
+
+# 查看指定的全局配置项
+git config user.name
+git config user.email
+
+# 获取帮助信息
+git help <命令>
+
+  # 获取git仓库的两种方式
+  1.将尚未进行版本控制的本地目录转换为Git仓库
+  新创建一个文件夹 然后通过鼠标右键打开 "Git Bash"
+  执行git init 后将文件夹转换为git仓库
+  生成.git隐藏目录 当前项目的Git仓库 包含了初始必要文件
+  2.从其他服务器克隆一个已存在的Git仓库
+  git clone http:// XXXXX
+
+
+  # 工作区中文件的四种状态
+  工作区中的每个文件可能有4种状态，分为两大类
+  1.未被Git管理
+  未跟踪(Untracked) - 不被Git所管理的文件
+  2.已被Git管理
+  未修改(Unmodified) - 工作区中文件的内容和Git仓库中的文件内容一致
+  已修改(modified) - 工作区中文件的内容和Git仓库中的文件内容不一致
+  已暂存(Staged) - 工作区中被修改的文件已被放到暂存区，准备将修改后的文件保存到Git仓库中
+
+  # 跟踪新文件
+  git add index.html - 使用命令git add开始跟中一个文件。
+  git status - 运行git status命令 可以查看index.html文件处于Changes to be committed 这行的下面，说明已被跟踪，并处于暂存状态
+  git status -s - index.html 右面会多个A
+
+  # 提交更新
+  git commit -m "新建了index.html文件"
+  git status
+
+  # 对已提交的文件进行修改
+  1.暂存已修改的文件 git add
+  git add命令 3个功效 ：
+  （1）可以用它开始跟踪新文件
+  （2）把已跟踪的、且已修改的文件放到暂存区
+  （3）把有冲突的文件标记为已解决状态
+
+
+  # 撤销对文件的修改
+  git checkout --index.html
+  把对工作区中对应的文件的修改，还原成Git仓库中所保存的版本。
+  操作的结果: 所有的修改会丢失，且无法恢复！ 危险性比较高，请慎重操作!
+
+  # 向暂存区中一一次性添加多个文件
+  git add .
+
+  # 从暂存区中移除文件
+  git reset HEAD 要移除的文件名称
+
+  # 跳过使用暂存区
+  Git标准的工作流程 工作区 暂存区 Git仓库
+  git commit -a - m "描述消息"
+
+  # 移出文件
+  从Git仓库中移出文件的方式有两种：
+  1.从Git仓库和工作区中同时移除对应的文件
+  git rm -f index.js
+  2.只从Git仓库中移出指定的文件，但保留工作区中对应的文件
+  git rm --cached index.css
+
+
+  # 忽略文件
+  创建名为.gitignonre的配置文件，列出要忽略的文件的匹配模式。
+  1. 以#开头的是注释
+  2.以/ 结尾的是目录
+  3.以/ 开头防止递归
+  4.以！开头标识取反
+  5.可以使用glob模式进行文件和文件夹的匹配(glob指简化了正则表达式)
+
+  # 查看提交历史
+  1. 按时间线后顺序列出所有的提交历史，最近的提交排在最上面
+  git log
+  2. 只展示最新的两条提交历史，数字可以按需进行填写
+  git log -2
+  3. 在一行上展示最近两条提交历史的信息
+  git log -2 --pretty=oneline
+  4.在一行上展示最近两条提交历史的信息
+  git log -2 --pretty=format
+
+  #回退到指定的版本
+  1.在一行上展示所有的提交历史
+  git log --pretty=oneline
+  2. 使用git reset --hard 命令，根据指定的提交ID回退到指定版本
+  git reset --hard<CommitID>
+    3. 在旧版本中使用 git reflog --pretty=oneline 命令，查看命令操作的历史
+    git reflog --pretty=oneline
+    4.再次根据最新的提交 ID，跳转到最新的版本
+    git reset --hard<CommitID>
+
+
+      # 小结
+      1.初始化Git仓库的命令
+      git init
+      2. 查看文件状态的命令
+      git status
+      3.一次性将文件加入暂存区的命令
+      git add .
+      4.将暂存区的文件提交到Git仓库的命令
+      git commit -m "提交消息"

@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 11.5px 0;
+}
+
+input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999;
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+.title {
+  width: 476px;
+  margin: 0 auto;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.body {
+  width: 476px;
+  background: white;
+  border-radius: 2px;
+  margin: 0 auto;
+  display: block;
+}
+
+.body2 {
+  width: 476px;
+  background: white;
+  border-radius: 2px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+}
+
+.titles {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  margin: 28px 0 35px 0;
+}
+
+
+.clearfloat {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 49px;
+  display: show;
+}
+
+.twopic {
+  overflow: hidden;
+  margin-bottom: 49px;
+  display: none;
+}
+
+.bigerweima {
+  display: block;
+  margin: 0 auto;
+  height: 160px;
+  width: 160px;
+  padding: 19.5px;
+  border: 1px solid #eee;
+}
+
+.bigerweima2 {
+  height: 160px;
+  width: 160px;
+  padding: 19.5px;
+  border: 1px solid #eee;
+  margin-left: 55px;
+  float: left;
+}
+
+.phonepic {
+  width: 208px;
+  height: 202px;
+  background: url('../images/scan_tips.png');
+  background-position: -234px -55px;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  float: left;
+}
+
+.bottomflex {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  height: 15px;
+  line-height: 15px;
+  margin-bottom: 23px;
+}
+
+.xinxi {
+  height: 15px;
+  line-height: 15px;
+  padding: 0 5px;
+  border-right: 1.5px solid #333;
+}
+
+.download {
+  padding: 0 5px;
+}
+
+.bottomflex a,
+.bottomflex a:hover {
+  color: #f4691c;
+}
+
+
+.bodyheader {
+  display: flex;
+  justify-content: end;
+  padding: 12px;
+}
+
+
+.saomadenglu {
+  font-size: 12px;
+  color: #ff8c14;
+  margin: 4px 12.5px 0 0;
+  cursor: pointer;
+}
+
+.erweima {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.pcpic {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.bodytitle {
+  width: 100%;
+  text-align: center;
+  margin-top: -16px;
+}
+
+.content {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.bodycontent {
+  display: flex;
+  font-size: 16px;
+  color: #666;
+}
+
+.bodycontent>div {
+  cursor: pointer;
+}
+
+.bodycontent>div:first-child {
+  color: #FF552E;
+  border-bottom: 1px solid #FF552E;
+}
+
+
+.bodycontent>div {
+  padding: 39px 30px 17px 40px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.bodyinput {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 23px 0 0 0;
+  border: 2px solid #EBEBEB;
+  width: 348px;
+}
+
+.textinput {
+  width: 325px;
+  padding-left: 15px;
+}
+
+.getcode {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  padding: 0 4px;
+  height: 26px;
+  color: #999;
+  background: #EEEEEE;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 26px;
+  display: none;
+  cursor: pointer;
+}
+
+.warningdiv {
+  display: none;
+  margin: 5px 0;
+}
+
+.warningicon {
+  margin-top: 6px;
+  margin-right: 5px;
+}
+
+.warningfont {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #FF552E;
+}
+
+.bodyinput2 {
+  position: relative;
+  margin: 23px 0 0 0;
+  border: 2px solid #EBEBEB;
+  width: 348px;
+  clear: both;
+}
+
+.eyes {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 13px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.closeactive {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 35px;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.checkdiv {
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.checkleft {
+  display: flex;
+  font-size: 12px;
+  color: #999;
+}
+
+.leftone {
+  display: flex;
+}
+
+.onefont {
+  margin-top: 1px;
+  margin-right: 20px;
+}
+
+.twofont {
+  margin-top: 1px;
+  margin-left: -0.5px;
+}
+
+.uncheckicon {
+  width: 14px;
+  height: 13px;
+  margin-top: 2px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.checkright {
+  font-size: 12px;
+  color: #999;
+}
+
+.checkright>a,
+.checkright>a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+.buttonDiv {
+  margin-top: 15px;
+  width: 350px;
+  text-align: center;
+  font-size: 14px;
+  background: #ff552e;
+  color: rgb(255, 187, 171);
+  padding: 11.5px 0;
+  cursor: pointer;
+}
+
+.utilsDiv {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+  margin-top: 25px;
+  padding-bottom: 17px;
+}
+
+.utilsDiv>div {
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+}
+
+.threes {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+}
+
+.tfont {
+  margin-top: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 476px;
+  margin: 0 auto;
+  margin-top: 31px;
+  color: white;
+  font-size: 12px;
+}
+
+.footer>div {
+  margin-left: -15px;
+}
+
+.kefu {
+  cursor: pointer;
+}
+
+.help {
+  cursor: pointer;
+}
+
+.tfonta,
+.tfonta:hover {
+  color: #999;
+}

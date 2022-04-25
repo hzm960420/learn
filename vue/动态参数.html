@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动态参数</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <label for="app">动态参数</label>
+    <input @[eventName]="event" id="app" name="app" type="text">
+    <button @click="eventName='focus'">获取焦点</button>
+    <button @click="eventName='keydown'">按键</button>
+    <button @click="eventName='keyup'">键盘抬起</button>
+  </div>
+  <script>
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        eventName: ''
+      },
+      methods: {
+        event() {
+          console.log(点击不同的按钮, 会检测不同的事件, 从而做接下来的操作, this.eventName)
+          if (this.eventName === 'focus') {
+            console.log('这是获取焦点事件，我们可以在此时做一些操作');
+          }
+          if (this.eventName === 'keydown') {
+            console.log('这是按下按键事件，我们可以在此时做一些操作');
+          }
+          if (this.eventName === 'keyup') {
+            console.log('这是键盘抬起事件，我们可以在此时做一些操作');
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

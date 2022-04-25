@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+}
+
+input::placeholder {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 11.5px 0;
+}
+
+.nousernamediv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: none;
+}
+
+.userbody {
+  width: 476px;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background: white;
+}
+
+
+.usericons {
+  display: block;
+  margin: 0 auto;
+  padding: 62px 0 27px 0;
+}
+
+.centerdiv {
+  width: 352px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.inputdiv {
+  display: block;
+  position: relative;
+  width: 348px;
+  border: 2px solid #ebebeb;
+  margin: 12px 0 0 0;
+  clear: both;
+}
+
+.soluve {
+  width: 100px;
+  border: 1px solid white;
+}
+
+.inputleft {
+  padding-left: 15px;
+}
+
+.uncheckicons {
+  height: 13px;
+  width: 13px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.getdtcode {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  padding: 0 6px;
+  height: 26px;
+  border-radius: 3px;
+  background: #EEEEEE;
+  font-size: 12px;
+  line-height: 26px;
+  color: #999;
+  cursor: pointer;
+}
+
+.userwarningdiv {
+  margin: 5px 0;
+}
+
+.userwarningdiv2 {
+  display: flex;
+  margin: -7px 0 9px 0;
+}
+
+.warnshow {
+  display: none;
+}
+
+.warningtext {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.acceptDiv {
+  display: flex;
+  margin: 23px 0 0 17px;
+  clear: both;
+}
+
+.acceptfont {
+  font-size: 14px;
+  color: #999;
+}
+
+.acceptfont a,
+.acceptfont a:hover {
+  color: #ff552e;
+}
+
+.confirmDiv {
+  background: #ff552e;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin: 24px 0 25px 0;
+  padding-left: 13px;
+  cursor: pointer;
+}
+
+.ufooter {
+  display: flex;
+  justify-content: space-around;
+  width: 476px;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: 30px;
+}
+
+.warningfont2 {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #FF552E;
+}

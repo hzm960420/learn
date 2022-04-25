@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 300px;
+      width: 300px;
+      background-color: skyblue;
+      /* border: 1px solid transparent; */
+      /* padding: 1px; */
+      overflow: hidden;
+    }
+
+    .son {
+      height: 200px;
+      width: 200px;
+      background-color: bisque;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 父元素塌陷的解决办法 ：1 给父元素加上边框 2.给父元素加上内边距 3给父元素加上overflow:hidden -->
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>

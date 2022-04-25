@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+<body>
+  <div class="app">
+    <ol>
+      <!-- 创建一个 todo-item 组件的实例 -->
+      <todo-item v-for="item in list" :key="item.id" :todo="item"></todo-item>
+    </ol>
+  </div>
+  <script>
+    Vue.component('todo-item', {
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    })
+
+    var app = new Vue({
+      el: ".app",
+      data: {
+        list: [
+          { id: 0, text: "这是待办项1" },
+          { id: 1, text: "这是待办项2" },
+          { id: 2, text: "这是待办项3" },
+          { id: 3, text: "这是待办项4" },
+          { id: 4, text: "这是待办项5" }
+        ]
+      }
+    })
+  </script>
+</body>
+
+</html>

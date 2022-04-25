@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue3组件</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <style>
+    .navbar {
+      height: 3
+    }
+
+    ul li {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <ul>
+      <todo-item v-for="item in List" :item="item" :key="item.id">
+
+      </todo-item>
+    </ul>
+  </div>
+  <script>
+    const TodoList = {
+      data() {
+        return {
+          List: [
+            { id: 0, text: "动漫 音乐" },
+            { id: 1, text: "象棋 围棋" },
+            { id: 2, text: "端游 手游" }
+          ]
+        }
+      }
+    }
+    // 把数据源从v绑定到vm
+    const app = Vue.createApp(TodoList)
+    // 先写子组件的名称,然后写props和template模板
+    app.component('todo-item', {
+      props: ['item'],
+      template: `<li>{{ item.text }}</li>`
+    })
+    // 把数据源从vm挂在到m上去
+    app.mount('.navbar')
+  </script>
+</body>
+
+</html>

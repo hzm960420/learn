@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue中的data元素</title>
+  <script src="../js/vue.js"></script>
+  <style>
+    #counter {
+      height: 40px;
+      width: 180px;
+      border: 1px solid grey;
+      border-radius: 10px;
+      display: flex;
+    }
+
+    #counter div:first-child {
+      color: red;
+      width: 60px;
+      line-height: 40px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      background: grey;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #counter div:nth-child(2) {
+      width: 60px;
+      line-height: 40px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    #counter div:last-child {
+      color: red;
+      width: 60px;
+      line-height: 40px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      background: grey;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="app">
+    <h2 v-text="username"></h2>
+    <p>{{school.name}} {{school.mobile}}</p>
+    <p>{{hobby[0]}}</p>
+  </div> -->
+  <div id="counter">
+    <div v-on:click="sub">-</div>
+    <div>{{count}}</div>
+    <div v-on:click="add">+</div>
+  </div>
+  <script>
+    var vm = new Vue({
+      el: "#app",
+      data: {
+        username: "黄子木",
+        school: {
+          name: "嘿嘿嘿",
+          mobile: "13689640367"
+        },
+        hobby: ['pp', 'kj', 'dpg']
+      }
+    })
+    var vm2 = new Vue({
+      el: "#counter",
+      data: {
+        username: "黄子木",
+        school: {
+          name: "嘿嘿嘿",
+          mobile: "13689640367"
+        },
+        hobby: ['pp', 'kj', 'dpg'],
+        count: 0
+      },
+      methods: {
+        sub($even) {
+          if (this.count === 0) {
+            this.count = 0;
+          } else {
+            this.count -= 1;
+          }
+        },
+        add($even) {
+          if (this.count === 10) {
+            this.count = 10;
+          } else {
+            this.count += 1;
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

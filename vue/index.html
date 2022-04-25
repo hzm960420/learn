@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+    <p v-text="username"></p>
+    <p v-text="gender">性别</p>
+  </div>
+  <div class="app">
+    <p>这是class选择器</p>
+    <p>{{username}}</p>
+    <p>{{gender}}</p>
+  </div>
+
+  <!-- 内容渲染指令 ： {{}}  v-text v-html
+  <!- v-text:指令的缺点:会覆盖元素内部原有的内容 -->
+  <!-- {{}} ：插值表达式 -->
+  <!-- v-html :可以写html标签-->
+  <!-- 属性绑定指令：插值表达式只能用在元素的内容节点中 不能用在元素的属性节点中 - 这时候要用到v-bind: :-> -->
+  <script>
+    var vm = new Vue({
+      el: "#app", // 挂载点
+      data: {
+        username: "潘琳玲",
+        gender: "女",
+        info: "<h4>大美丽，大漂亮</h4>"
+      }
+    })
+    var vm2 = new Vue({
+      el: ".app",
+      data: {
+        username: '黄子木',
+        gender: "男"
+      }
+    })
+
+  </script>
+</body>
+
+</html>

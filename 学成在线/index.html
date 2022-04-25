@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学成在线</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+      color: #333;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    em {
+      font-style: normal;
+    }
+
+    .clearfix::after {
+      content: '';
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+
+    .clearfix {
+      *zoom: 1
+    }
+
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      height: 42px;
+      line-height: 42px;
+      margin: 30px auto;
+    }
+
+    .logo {
+      float: left;
+      width: 198px;
+      height: 42px;
+    }
+
+    .nav {
+      float: left;
+      margin-left: 60px;
+    }
+
+    .nav ul li {
+      float: left;
+    }
+
+    .nav ul li a {
+      display: block;
+      padding: 0 10px;
+      font-weight: 400;
+      font-size: 18px;
+      color: #050505;
+    }
+
+    .nav ul li a:hover {
+      color: skyblue;
+      border-bottom: 2px solid skyblue;
+    }
+
+    .nav .shouye {
+      border-bottom: 2px solid skyblue;
+    }
+
+    .search {
+      float: left;
+      margin-left: 160px;
+      height: 42px;
+    }
+
+    .searchinput {
+      float: left;
+      border: 1px solid deepskyblue;
+      border-right: none;
+      width: 345px;
+      height: 40px;
+      padding-left: 15px;
+      outline: none;
+    }
+
+    .button {
+      float: left;
+      height: 42px;
+      width: 50px;
+      background-color: skyblue;
+      border: 0;
+    }
+
+    .user {
+      float: left;
+      margin-left: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header center">
+    <div class="logo">
+      <img src="./img/asset-logoIco.png" alt="">
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#" class="shouye">首页</a></li>
+        <li><a href="#">课程</a></li>
+        <li><a href="#">职业规划</a></li>
+      </ul>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="输入查询关键字" class="searchinput" />
+      <button class="button"></button>
+    </div>
+    <div class="user">
+      <div></div>
+      <div>user-list</div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端面试</title>
+  <style>
+    .container {
+      font-size: 0px;
+    }
+
+    .one {
+      height: 40px;
+      width: 20px;
+      background-color: red;
+      font-size: 16px;
+    }
+
+    .two {
+      height: 60px;
+      width: 20px;
+      background-color: green;
+      font-size: 16px;
+    }
+
+    .three {
+      height: 80px;
+      width: 20px;
+      background-color: yellow;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    1.Doctype的作用？ 严格模式与混杂模式如何区分？他们有什么意义？
+    （1）Doctype:文档类型标签 作用是告诉浏览器的解析器，用什么文档类型、规范来解析这个文档。 (规范指的是DTD规则 三种DTD规则：严格、过渡和基于框架的HTML版本)
+    （2）严格模式：指浏览器按W3C标准解析代码，呈现页面。
+    （3）混杂模式：又称为怪异模式，指浏览器按自己的方式解析代码，即使用一种比较宽松的向后兼容的方式来显示页面。浏览器究竟是使用严格模式还是混杂模式呈现页面与网页中的 DTD （文件类型定义）直接相关。
+    （4） 意义：Dcotype不存在或者不正确会导致文档以混杂模式呈现。
+
+    2.HTML5 为什么只写Doctype html
+    (1) 因为html5不基于SGML（标准通用置标语言）,因此不需要对DTD进行引用。
+
+    3.行内元素有哪些？块级元素有哪些？ 空元素有哪些?
+    （1）行内元素 就是在一行之内排列的元素，常见的元素有 a img input label select textarea span br
+    （2）块级元素 独占一行 常见的元素有 div h1~h6 form ol ul
+    （3）空元素 br hr img input link meta
+
+    4.页面导入样式时link和@import有什么区别？
+    (1)link是html标签 @import不是。 @import是css提供的
+    (2)link除了加载css还能用于定义RSS，定义rel链接等属性 而@import只能加载css
+    (3)@import 有兼容问题 而link没有兼容问题
+    (4)link可以通过js控制DOM去改变样式 而@import不能
+    (5)@import还可以添加其他样式表 而link不能
+
+    5.对浏览器内核的理解
+    浏览器内核就是渲染引擎渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。不同的浏览器内核对网页编写语法的解释也有不同
+
+    6.常见的浏览器内核有哪些？
+    ie浏览器 Trident
+    chrome浏览器 chormium blink
+    firefox浏览器 Gecko
+    safari浏览器 webkit
+    Opera浏览器 blink
+
+    7.HTML5有哪些新特性、移除了哪些元素？如何处理HTML5新标签的浏览器兼容问题?如何区分html与html5?
+    (1)HTML5新增元素 内容元素：article header footer section nav aside
+
+    8.HTML语义化的理解？
+    页面去掉样式或者加载失败的时候能够让页面呈现出清晰的结构。
+    为了在没有CSS的情况下，页面也能呈现出很好地内容结构、代码结构
+    有利于SEO,便于项目的开发及维护，使HTML代码更具有可读性
+
+    9.请描述一下cookie localStorage 和sessionStorage的区别？
+    (1) 存储的时间有效期不同
+    cookie的有效期是可以设置的，默认的情况下是关闭浏览器后失效；
+    sessionStorage的有效期是仅保持在当前页面，关闭当前会话页或者浏览器后就会失效；
+    localStorage的有效期是在不进行手动删除的情况下是一直有效的
+    (2)存储的大小不同
+    cookie的存储大小为4Kb
+    sessionStorage和localStorage的有效期为5MB
+    (3)与服务器的通信
+    cookie会参与到与服务端的通信中，一般会携带在http请求的头部中，例如一些关键密匙验证等。
+    localStorage和sessionStorage是单纯的前端存储，不参与与服务端的通信
+    (4)读写操作的便捷程度
+    （1）cookie
+    // cookie创建
+    document.cookie = "username = zhangsan";
+    document.cookie = "username = zhangsan; expires = Thu，18 Dec 2043 12:00:00 GMT";
+    // cookie读取
+    var x = document.cookie
+
+    // cookie删除
+    document.cookie = "username = ;expires = Thu, 01 Jan 1970 00:00:00 GMT"
+
+    (2)sessionStoage
+    // 存储一条数据
+    sessionStorage.setItem('username','zhangsan');
+    // 读取一条数据
+    sessionStorage.getItem("username");
+    // 清除一条数据
+    sessionStorage.removeItem('username');
+    // 移出所有数据
+    sessionStorage.clear()
+
+    (3)localStorage
+    // 存储一条数据
+    localStorage.setItem('username','zhangsan');
+    // 读取一条数据
+    localStorage.getItem("username");
+    // 清除一条数据
+    localStorage.removeItem('username');
+    // 移出所有数据
+    localStorage.clear();
+
+    10.
+
+
+  </div>
+</body>
+
+</html>

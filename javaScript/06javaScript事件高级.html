@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    事件高级：
+    1.注册事件 绑定事件
+    给元素添加事件有两种方法 传统方式和方法监听注册方式
+    传统方式：同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数 有唯一性
+    方法监听注册方式：同一个元素同一个事件可以注册多个监听器 按注册顺序依次执行
+  </div>
+  <div>
+    addEventListener事件监听方式
+    eventTarget.addEventListener()方法将指定的监听器注册到 eventTarget（目标对象）上
+    当该对象触发指定的事件时，就会执行事件处理函数
+    eventTarget.addEventListener(type,listener[,useCapture])
+    该方法接收三个参数：
+    type:事件类型字符串 比如click mouseover 注意不加on
+    listener: 事件处理函数 事件发生时 会调用该监听函数
+    useCapture: 可选参数 是一个布尔值 默认是false
+  </div>
+
+  <div>
+    attachEvent事件监听方式
+    eventTarget.attachEvent()方法将指定的监听器注册到 eventTarget（目标对象） 上
+    当该对象触发指定的事件时，指定的回调函数就会被执行
+    eventTarget.attachEvent(eventNameWithOn,callback)
+    该方法接收两个参数:
+    eventNameWithOn：事件类型字符串，比如 onclick 、onmouseover ，这里要带 on
+    callback： 事件处理函数，当目标触发事件时回调函数被调用
+    ie9以前的版本支持
+  </div>
+  <div>
+    注册事件兼容性解决方案
+    兼容性处理的原则：首先照顾大多数浏览器，再处理特殊浏览器
+    function addEventListener(element, eventName, fn) {
+    // 判断当前浏览器是否支持 addEventListener 方法
+    if (element.addEventListener) {
+    element.addEventListener(eventName, fn); // 第三个参数 默认是false
+    } else if (element.attachEvent) {
+    element.attachEvent('on' + eventName, fn);
+    } else {
+    // 相当于 element.onclick = fn;
+    element['on' + eventName] = fn;
+    }
+  </div>
+
+  <div>
+    removeEventListener删除事件方式
+    eventTarget.removeEventListener(type,listener[,useCapture]);
+    该方法接收三个参数：
+    type:事件类型字符串，比如click,mouseover,注意这里不要带on
+    listener：事件处理函数，事件发生时，会调用该监听函数
+    useCapture：可选参数，是一个布尔值，默认是 false。
+  </div>
+
+  <div>
+    detachEvent删除事件方式
+    eventTarget.detachEvent(eventNameWithOn,callback);
+    该方法接收两个参数：
+    eventNameWithOn：事件类型字符串，比如 onclick 、onmouseover ，这里要带 on
+    callback： 事件处理函数，当目标触发事件时回调函数被调用
+    ie9以前的版本支持
+  </div>
+
+  <div>
+    传统事件删除方式
+    event.onclick = null;
+  </div>
+  <button>传统注册事件</button>
+  <button>方法监听注册事件</button>
+  <button>ie9 attachEvent</button>
+</body>
+<script>
+  var btn = document.querySelectorAll('button');
+  btn[0].onclick = function() {
+    alert('11');
+  }
+  btn[0].onclick = function() {
+    alert('22');
+  }
+  btn[1].addEventListener('click', function() {
+    alert('22');
+  });
+  btn[1].addEventListener('click', function() {
+    alert('333')
+  })
+  btns[2].attachEvent('onclick', function() {
+    alert(11);
+  })
+</script>
+
+</html>

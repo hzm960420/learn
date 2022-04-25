@@ -1,0 +1,90 @@
+# 开源许可协议
+BSD Apache Licence 2.0 GPL LGPL MIT
+GPL 对商业不友好 Linux
+MIT 对商业友好 jQuery Node.js
+
+# 远程仓库的两种访问方式
+HTTPS 和 SSH
+HTTPS: 零配置 需要登录
+SSH: 需要配置 免登录
+
+# 基于HTTPS 将本地仓库上传到Github
+1.本地没有现成的Git仓库
+（1） 使用终端命令创建README.md文件，并写入初始内容为# project02 (echo "# project 02" >> README.md)
+(2) 初始化本地Git仓库，并将文件的修改提交到本地的Git仓库中
+（1.git init 2.git add README.md 3.git commit -m "first commit"）
+(3) 将本地仓库和远程仓库进行关联，并把远程仓库命名为origin
+git remote add origin https://github.com/hzm960420/learn.git
+(4) 将本地仓库中的内容推送到远程的origin仓库中
+git push -u origin master
+
+
+2.本地有现成的Git仓库
+（1）将本地仓库和远程仓库进行关联，并把远程仓库命名为origin
+git remote add origin https://github.com/hzm960420/learn.git
+（2）将本地仓库中的内容推送到远程的origin仓库中
+git push -u origin master
+-u 表示把本地分支和远程分支进行关联
+
+多次推送
+git push
+
+
+# 基于ssh将本地仓库上传到Github
+1.生成SSH Key
+ssh-keygen -t rsa -b 4096 -C "441695580@qq.com"
+连续敲击3次回车键 生成id_rsa he id_rsa.pub
+
+2.配置SSH Key
+使用记事本打开id_rsa.pub文件，复制里面的文本内容
+在浏览器登录Github 点击头像->Settings -> SSH and GPG keys -> SSH Key
+
+3.监测Github的SSH Key是否配置成功
+ssh -T git@github.com
+
+# master 主分支
+用来保存和记录整个项目已完成的功能代码
+
+# 查看分支列表
+git branch
+
+
+# 创建新分支 name
+git branch name
+
+# 切换分支 master
+git checkout master
+
+# 分支的快速创建和切换
+git checkout -b 分支名称
+
+# 合并分支 删除分支
+1. 切换到master 分支
+git ckeckout master
+2. 在master分支上运行 git merge 命令，将login 分支的代码合并到master分支
+git merge login
+
+3.删除分支
+git branch -d 分支名称
+
+
+#遇到冲突时的分支合并
+1.假设：在把reg分支合并到master分支期间，代码发生了冲突
+git checkout master
+git merge reg
+
+2. 打开包含冲突的文件，手动解决冲突之后，再执行如下的命令
+git add .
+git commit -m "解决了分支合并冲突的问题"
+
+
+# 将本地分支推送到远程仓库
+git push -u 远程仓库的别名 本地分支名称:远程分支名称
+
+
+# 查看远程仓库中所有的分支列表
+git remote show 远程仓库名称
+
+
+# 从远程仓库，拉取当前分支最新的代码，保持当前分支的代码和远程分支代码一致
+git pull

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue3学习</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <!-- 声明式渲染 -->
+  <div id="counter">
+    Counter:{{ counter }}
+  </div>
+
+  <div id="bind-attribute">
+    <span :title="message">
+      鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+  </div>
+  <!-- 处理用户输入 -->
+  <div id="even-handing">
+    <p>{{title}}</p>
+    <button @click="reverseTitle">翻转内容</button>
+  </div>
+  <div id="two-way-binding">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+  </div>
+  <!-- 条件与循环 -->
+  <div id="conditional-rendering">
+    <span v-if="seen">现在你看到我了</span>
+  </div>
+  <div id="list-rendering">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+  <!-- 组件化应用构建 -->
+  <div id="todolist">
+    <ol>
+      <todo-item></todo-item>
+    </ol>
+  </div>
+  <script>
+    const Counter = {
+      data() {
+        return {
+          counter: 0
+        }
+      },
+      mounted() {
+        setInterval(() => {
+          this.counter++
+        }, 1000)
+      }
+    }
+    Vue.createApp(Counter).mount('#counter');
+    const attr = {
+      data() {
+        return {
+          message: '当前时间' + new Date().toLocaleString()
+        }
+      }
+    }
+    Vue.createApp(attr).mount('#bind-attribute');
+    const reverse = {
+      data() {
+        return {
+          title: '这是内容'
+        }
+      },
+      methods: {
+        reverseTitle() {
+          this.title = this.title.split('').reverse().join('');
+        }
+      }
+    }
+    Vue.createApp(reverse).mount('#even-handing')
+    const model = {
+      data() {
+        return {
+          message: ""
+        }
+      }
+    }
+    Vue.createApp(model).mount('#two-way-binding')
+    const seens = {
+      data() {
+        return {
+          seen: true
+        }
+      }
+    }
+    Vue.createApp(seens).mount('#conditional-rendering')
+    const list = {
+      data() {
+        return {
+          todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+          ]
+        }
+      }
+    }
+    Vue.createApp(list).mount('#list-rendering')
+    const TodoItem = {
+      template: `<li>This is a todo</li>`
+    }
+    const TodoApp = Vue.createApp({
+      components: {
+        TodoItem // 注册一个新组件
+      }
+    })
+    // 挂在Vue应用
+    TodoApp.mount('#todolist')
+  </script>
+</body>
+
+</html>

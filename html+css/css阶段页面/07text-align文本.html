@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .text {
+      width: 200px;
+      background-color: aquamarine;
+      color: #fff;
+      text-align: center;
+    }
+
+    .bg {
+      height: 200px;
+      width: 200px;
+      background-color: #333;
+      text-align: center;
+    }
+
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      text-align: center;
+    }
+
+    .son {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    对齐文本:
+    text-align:设置元素内水平对齐的方式 left right center
+    text-align的应用场景:
+    1.父盒子设置text-align:center后，盒子里面的文字内容、行内元素、行内块元素都可以水平居中。
+    2.块级元素一般是不能水平居中的。
+    3.块级元素想要水平居中，做法有两个：
+    （1）块级元素自身没有设置宽高 父级元素使用text-align:center;
+    （2）块级元素使用margin: 0 auto;
+  </div>
+  <div class="text">
+    我是div水平对齐
+  </div>
+  <p class="text">
+    我是p水平对齐
+  </p>
+  <h2 class="text">
+    我是h水平对齐
+  </h2>
+  <div class="bg">
+    <img src="../../image/xiaomi/icon2.png" alt="" class="icon">
+  </div>
+  <div class="box">
+    <p class="son">啊</p>
+  </div>
+</body>
+
+</html>

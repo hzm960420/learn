@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    面向对象：
+    1.对象：对象是由属性和方法组成的
+    属性：事物的特征，在对象中用属性来表示
+    方法：事物的行为，在对象中用方法来表示
+    2.类
+    类抽象了对象的公共部分，它泛指某一大类（class）
+    对象特指某一个，通过类实例化一个具体的对象
+    3.构造函数 constructor()
+    constructor() 方法是类的构造函数(默认方法)，用于传递参数,返回实例对象，通过 new 命令生成对象实例时，自动调用该方法。如果没有显示定义, 类内部会自动给我们创建一个constructor()
+    通过 class 关键字创建类，类名我们还是习惯性定义首字母大写
+    类里面有个 constructor函数，可以接收传递过来的参数，同时返回实例对象
+    constructor函数只要 new 生成实例时，就会自动调用这个函数，如果我们不写这个函数，类也会自动生成这个函数
+    最后注意语法规范
+    创建类➡类名后面不要加小括号
+    生成实例➡类名后面加小括号
+    构造函数不需要加 function 关键字
+  </div>
+  <div>
+
+  </div>
+</body>
+<script>
+  class Star {
+    // class body
+    constructor(username, age) {
+      this.username = username;
+      this.age = age;
+    }
+    say () {
+      console.log(this.username + "你好");
+    }
+  }
+
+  var ldh = new Star('刘德华', 20);
+  ldh.say();
+  class Father {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+    }
+    sum () {
+      console.log(this.x + this.y)
+    }
+  }
+
+  class Son extends Father {
+    constructor(x, y) {
+      super(x, y)
+      this.x = x;
+      this.y = y;
+    }
+  }
+
+
+  var val = 12;
+  function fun1 () {
+    console.log(val);
+    var val = 20;
+    console.log(val);
+  }
+  fun1();
+
+
+  var val;
+  function fun1 () {
+    var val;
+    console.log(val);
+    val = 20;
+    console.log(val);
+  }
+  val = 12;
+  fun1();
+
+  // 0 1 2 3
+  for (r = 0; r < 4; r++) {
+    for (var i = 0, str = ''; i < 4; i++) {
+      str += i < (3 - r) ? ' ' : '♥';
+    }
+    console.log(str);
+  }
+
+  function Foo () {
+    var i = 0;
+    return function() {
+      console.log(i++);
+    }
+  }
+  var f1 = Foo();
+  var f2 = Foo();
+  f1();
+  f1();
+  f2();
+</script>
+
+</html>
